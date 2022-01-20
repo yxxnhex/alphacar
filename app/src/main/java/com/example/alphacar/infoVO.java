@@ -6,6 +6,7 @@ public class infoVO {
     private String ve_type;
     private String energy_type;
 
+
     public String getUser_phone() {
         return user_phone;
     }

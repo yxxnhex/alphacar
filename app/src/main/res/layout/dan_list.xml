@@ -2,28 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline85"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="595dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline86"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="57dp" />
+        app:layout_constraintGuide_begin="60dp" />
 
     <TextView
         android:id="@+id/tvDT"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
+        android:text="날짜/시간"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline87"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,27 +28,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="165dp" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline88"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="387dp" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline89"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="520dp" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <TextView
         android:id="@+id/tvLoc"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
+        android:text="사고장소"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline88"
         app:layout_constraintStart_toStartOf="@+id/guideline87"
@@ -65,6 +60,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
+        android:text="사고방향"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline89"
         app:layout_constraintStart_toStartOf="@+id/guideline88"
@@ -75,6 +71,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
+        android:text="사고유무"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline89"
