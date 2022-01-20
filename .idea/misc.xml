@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/edit.xml" value="0.1" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/icon.xml" value="0.1" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/radius.xml" value="0.2671875" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/radius_r.xml" value="0.1" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/acc.xml" value="0.246875" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/acc_menu.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/dan.xml" value="0.5" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/home.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/info.xml" value="0.5" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/login.xml" value="0.5" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/main.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/main2.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/menu.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/start.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/urg_call.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

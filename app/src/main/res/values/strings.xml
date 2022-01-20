@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AlphaCar</string>
+
+    <string name="acc">\n차량 충돌이\n감지되었습니다 \n차량을 멈추고 \n도움을 요청하세요</string>
+</resources>
