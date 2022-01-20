@@ -10,8 +10,8 @@ import android.widget.ImageView;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    Button btnAccCall, btn119Call;
-    ImageView imgAcc, imgBtnMenu;
+    Button btnAccCall, btn119Call, btnMyLoc;
+    ImageView imgAcc, imgBtnMenu, imgBtnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +21,9 @@ public class MainActivity2 extends AppCompatActivity {
         btnAccCall = findViewById(R.id.btnAccCall);
         btn119Call = findViewById(R.id.btn119Call);
         imgAcc = findViewById(R.id.imgAcc);
-        imgBtnMenu = findViewById(R.id.imgBtnHome);
+        imgBtnMenu = findViewById(R.id.imgBtnMenu);
+        imgBtnBack = findViewById(R.id.imgBtnBack);
+        btnMyLoc = findViewById(R.id.btnMyLoc);
 
         // 메뉴 버튼
         imgBtnMenu.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +31,19 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
+            }
+        });
+        // 뒤로가기 버튼
+        imgBtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        btnMyLoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent new Intent(getApplicationContext(), )
             }
         });
 
@@ -48,5 +63,14 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    //뒤로가기 버튼 눌렀을 때
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class); //지금 액티비티에서 다른 액티비티로 이동하는 인텐트 설정
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    //인텐트 플래그 설정
+        startActivity(intent);  //인텐트 이동
+        finish();   //현재 액티비티 종료
     }
 }

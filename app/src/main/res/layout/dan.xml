@@ -162,7 +162,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgBtnHome"
+        android:id="@+id/imgBtnMenu"
         android:layout_width="40dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"

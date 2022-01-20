@@ -34,7 +34,7 @@ public class InfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
-        imgBtnHome = findViewById(R.id.imgBtnHome);
+        imgBtnHome = findViewById(R.id.imgBtnMenu);
         imgBtnBack = findViewById(R.id.imgBtnBack);
         tvPhoneNum = findViewById(R.id.tvPhoneNum);
         tvCarNum = findViewById(R.id.tvCarNum);

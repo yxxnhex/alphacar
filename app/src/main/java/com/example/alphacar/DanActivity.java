@@ -14,7 +14,7 @@ public class DanActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dan);
-        imgBtnHome = findViewById(R.id.imgBtnHome);
+        imgBtnHome = findViewById(R.id.imgBtnMenu);
         imgBtnBack = findViewById(R.id.imgBtnBack);
 
         // home 버튼

@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     android:background="#040C2F">
 
+    <LinearLayout
+        android:id="@+id/lin_test"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -144,7 +154,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgBtnHome"
+        android:id="@+id/imgBtnMenu"
         android:layout_width="40dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"

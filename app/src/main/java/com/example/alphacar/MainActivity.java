@@ -1,11 +1,16 @@
 package com.example.alphacar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -19,9 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvWarning, tvSpeed;
     VideoView vidMain;
-    ImageView imgBtnMenu, imgWarning, imgBtnBack;
-    Animation anime;
+    ImageView imgBtnMenu, imgWarning;
+    Animation anime, anime2;
     Button btn111;
+    ConstraintLayout clMain;
     LinearLayout lin_test;
 
     @Override
@@ -34,11 +40,13 @@ public class MainActivity extends AppCompatActivity {
         tvSpeed = findViewById(R.id.tvSpeed);
         vidMain = findViewById(R.id.vidMain);
         imgWarning = findViewById(R.id.imgWarning);
-        imgBtnMenu = findViewById(R.id.imgBtnHome);
-        imgBtnBack = findViewById(R.id.imgBtnBack);
+        imgBtnMenu = findViewById(R.id.imgBtnMenu);
+//        clMain = findViewById(R.id.clMain);
+        MyThread myThread2 = new MyThread(imgWarning);
+        myThread2.start();
         // 애니메이션 확인용 버튼
-        //btn111 = findViewById(R.id.btn111);
-        //lin_test = findViewById(R.id.lin_test);
+//        btn111 = findViewById(R.id.btn111);
+        lin_test = findViewById(R.id.lin_test);
 
         // 애니메이션 효과부분
         anime = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anime);
@@ -46,21 +54,23 @@ public class MainActivity extends AppCompatActivity {
 //        btn111.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                clMain.startAnimation(anime);
-//                clMain.setBackgroundColor(Color.parseColor("#66f08080"));
-//                vidMain.startAnimation(anime);
+////                clMain.startAnimation(anime);
+////                clMain.setBackgroundColor(Color.parseColor("#66f08080"));
+////                vidMain.startAnimation(anime);
 //                lin_test.startAnimation(anime);
-//                lin_test.setBackgroundColor(Color.parseColor("#66f08080"));
-
+//                lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
+//                imgWarning.setImageResource(R.drawable.hamburger);
+//
 //                btn111.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View view) {
-//                        clMain.setBackgroundColor(Color.WHITE);
-//                        clMain.clearAnimation();
-//                        vidMain.clearAnimation();
+////                        clMain.setBackgroundColor(Color.WHITE);
+////                        clMain.clearAnimation();
+////                        vidMain.clearAnimation();
 //                        lin_test.setBackgroundColor(Color.parseColor("#00000000"));
 //                        lin_test.clearAnimation();
-
+//                        imgWarning.setImageResource(R.drawable.near);
+//
 //                    }
 //                });
 
@@ -73,13 +83,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
-            }
-        });
-//        뒤로가기 버튼
-        imgBtnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
             }
         });
 
@@ -102,9 +105,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
     }
 
     // 뷰 끝났을때 / 화면이 안보일때
@@ -121,15 +121,79 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         if (vidMain != null) vidMain.stopPlayback();
     }
+    public void warning(int i){
+        if(i == 1 ){
+            lin_test.startAnimation(anime);
+            lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
+            imgWarning.setImageResource(R.drawable.back);
+        }
+        else if(i == -1 ){
+            lin_test.setBackgroundColor(Color.parseColor("#00000000"));
+            lin_test.clearAnimation();
+            imgWarning.setImageResource(R.drawable.back2);
 
-    //뒤로가기 버튼 눌렀을 때
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(getApplicationContext(), HomeActivity.class); //지금 액티비티에서 다른 액티비티로 이동하는 인텐트 설정
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    //인텐트 플래그 설정
-        startActivity(intent);  //인텐트 이동
-        finish();   //현재 액티비티 종료
+        }else if(i== 2) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(intent);
+        }
+
+    }
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            int num = msg.arg1;
+            ImageView iv = (ImageView) msg.obj;
+            warning(num);
+
+
+
+
+        }
+    };
+
+    class MyThread extends Thread {
+        ImageView iv;
+        public MyThread(ImageView iv){
+            this.iv = iv;
+        }
+
+        @Override
+        public void run() {
+            for (int i = 30; i > 0; i--){
+                try {
+                    Thread.sleep(1000);
+                    Message message = new Message();
+
+                    if( i == 20 ) {
+
+                        message.arg1 = 1;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }else if(i == 15){
+                        message.arg1 = -1;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }
+                    else if(i == 10){
+                        message.arg1 = 2;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }
+                    else{
+                        message.arg1 = 0;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }
+
+
+
+                    handler.sendMessage(message);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
 }

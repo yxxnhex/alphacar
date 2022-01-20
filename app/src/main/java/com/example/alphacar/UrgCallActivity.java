@@ -29,7 +29,7 @@ public class UrgCallActivity extends AppCompatActivity {
         btnCallNum2 = findViewById(R.id.btnCallNum2);
         btnCallNum3 = findViewById(R.id.btnCallNum3);
         btnCallNum4 = findViewById(R.id.btnCallNum4);
-        imgBtnHome = findViewById(R.id.imgBtnHome);
+        imgBtnHome = findViewById(R.id.imgBtnMenu);
         imgBtnBack = findViewById(R.id.imgBtnBack);
         // DB 연결되면 넣을 기능 선언들
         tvInsurance1 = findViewById(R.id.tvInsurance1);
