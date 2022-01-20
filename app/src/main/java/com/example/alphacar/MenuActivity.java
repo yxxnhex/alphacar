@@ -1,7 +1,9 @@
 package com.example.alphacar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,16 +14,19 @@ public class MenuActivity extends AppCompatActivity {
 
     ImageView imgBtnBack;
     TextView btnMy, btnAccList, btnWarnCall;
+    private SharedPreferences preferences; // SharedPreferences 불러옴 (초기화)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-
+        preferences = getSharedPreferences("login_session", MODE_PRIVATE); // 'login_session'이라는 폴더를 불러옴
         imgBtnBack = findViewById(R.id.imgBtnBack);
         btnAccList = findViewById(R.id.btnAccList);
         btnMy = findViewById(R.id.btnMy);
         btnWarnCall = findViewById(R.id.btnWarnCall);
-
+        Log.e("id", "onCreate: "+preferences.getString("userid","")  ); // preferences.getString("userid","") -> 폴더에 저장되어있는 값을 불러옴(userid라는 이름으로 'test_id'가져옴)
+        Log.e("pw", "onCreate: "+preferences.getString("userpw","")  );
         btnAccList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
