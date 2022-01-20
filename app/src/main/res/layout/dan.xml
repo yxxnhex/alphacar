@@ -169,7 +169,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home_b" />
+        app:srcCompat="@drawable/hom2" />
 
     <ImageView
         android:id="@+id/imgBtnBack"
@@ -179,7 +179,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
         app:layout_constraintStart_toStartOf="@+id/guideline55"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_b" />
+        app:srcCompat="@drawable/back" />
 
     <TextView
         android:id="@+id/textView8"
