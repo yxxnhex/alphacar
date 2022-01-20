@@ -32,6 +32,23 @@ public class DanActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        String url = "http://172.30.1.60:5000/select_t_event";
+        String user_phone_num = "010-333-6666";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
     @Override
     public void onBackPressed() {
