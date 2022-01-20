@@ -2,6 +2,7 @@ package com.example.alphacar;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +46,8 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
     Circle circle;
     CircleOptions circle1KM;
 
+    ImageView imgBtnBack, imgBtnMenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +55,25 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
         setTitle("GPS 현재위치 확인하기");
 
         button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
+        button2 = findViewById(R.id.button1);
         textView1 = findViewById(R.id.textView1);
+        imgBtnBack = findViewById(R.id.imgBtnBack);
+        imgBtnMenu = findViewById(R.id.imgBtnMenu);
+
+        imgBtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        imgBtnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         gpsListener = new GPSListener();
@@ -268,5 +289,13 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
     @Override
     public void onGranted(int requestCode, String[] permissions) {
         Toast.makeText(getApplicationContext(),"permissions granted : " + permissions.length, Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class); //지금 액티비티에서 다른 액티비티로 이동하는 인텐트 설정
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    //인텐트 플래그 설정
+        startActivity(intent);  //인텐트 이동
+        finish();   //현재 액티비티 종료
     }
 }

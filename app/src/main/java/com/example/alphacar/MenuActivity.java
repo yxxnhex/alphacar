@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MenuActivity extends AppCompatActivity {
 
     ImageView imgBtnBack;
-    TextView btnMy, btnAccList, btnWarnCall;
+    TextView btnMy, btnAccList, btnWarnCall, btnLocation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +21,15 @@ public class MenuActivity extends AppCompatActivity {
         btnAccList = findViewById(R.id.btnAccList);
         btnMy = findViewById(R.id.btnMy);
         btnWarnCall = findViewById(R.id.btnWarnCall);
+        btnLocation = findViewById(R.id.btnLocation);
+
 
         btnAccList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), DanActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         btnMy.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +37,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         btnWarnCall.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +45,15 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), UrgCallActivity.class);
                 startActivity(intent);
+                finish();
+            }
+        });
+        btnLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MyLocActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         imgBtnBack.setOnClickListener(new View.OnClickListener() {
