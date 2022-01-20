@@ -161,7 +161,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/list_b" />
+        app:srcCompat="@drawable/list" />
 
     <TextView
         android:id="@+id/tvWarning"
@@ -192,7 +192,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/cn3" />
 
     <ImageView
         android:id="@+id/imgBtnBack"
@@ -204,7 +204,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/back_b" />
+        app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/imageView6"
