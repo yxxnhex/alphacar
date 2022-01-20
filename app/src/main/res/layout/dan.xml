@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     android:background="#040C2F ">
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="0dp"
-        android:layout_height="3dp"
-        android:background="#1d6395"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline64"
-        app:layout_constraintEnd_toStartOf="@+id/guideline56"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline64"
         android:layout_width="wrap_content"
@@ -182,6 +169,19 @@
         app:srcCompat="@drawable/back" />
 
     <TextView
+        android:id="@+id/textView23"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="#686d82"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline64"
+        app:layout_constraintEnd_toStartOf="@+id/guideline56"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -190,10 +190,11 @@
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toTopOf="@+id/guideline51" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <ListView
         android:layout_width="0dp"
@@ -209,6 +210,7 @@
         android:gravity="center"
         android:text="날짜 / 시간"
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
@@ -221,6 +223,7 @@
         android:gravity="center"
         android:text="사고장소"
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline79"
         app:layout_constraintStart_toStartOf="@+id/guideline83"
@@ -233,6 +236,7 @@
         android:gravity="center"
         android:text="사고 방향"
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline55"
         app:layout_constraintStart_toStartOf="@+id/guideline84"
@@ -245,6 +249,7 @@
         android:gravity="center"
         android:text="충돌"
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
         app:layout_constraintStart_toStartOf="@+id/guideline90"
@@ -254,7 +259,7 @@
         android:id="@+id/textView2"
         android:layout_width="750dp"
         android:layout_height="3dp"
-        android:background="#1d6395"
+        android:background="#686d82"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toEndOf="parent"
@@ -266,7 +271,7 @@
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="3dp"
-        android:background="#1d6395"
+        android:background="#686d82"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
@@ -278,7 +283,7 @@
         android:id="@+id/textView17"
         android:layout_width="2dp"
         android:layout_height="0dp"
-        android:background="#1D6395"
+        android:background="#686d82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline83"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -288,7 +293,7 @@
         android:id="@+id/textView19"
         android:layout_width="2dp"
         android:layout_height="0dp"
-        android:background="#1D6395"
+        android:background="#686d82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline84"
         app:layout_constraintStart_toStartOf="@+id/guideline79"
@@ -298,7 +303,7 @@
         android:id="@+id/textView20"
         android:layout_width="2dp"
         android:layout_height="0dp"
-        android:background="#1D6395"
+        android:background="#686d82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline90"
         app:layout_constraintStart_toStartOf="@+id/guideline55"
@@ -308,7 +313,7 @@
         android:id="@+id/textView21"
         android:layout_width="2dp"
         android:layout_height="0dp"
-        android:background="#1D6395"
+        android:background="#686d82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline48"
         app:layout_constraintHorizontal_bias="1.0"
@@ -319,7 +324,7 @@
         android:id="@+id/textView22"
         android:layout_width="2dp"
         android:layout_height="0dp"
-        android:background="#1D6395"
+        android:background="#686d82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline91"
         app:layout_constraintStart_toStartOf="@+id/guideline56"

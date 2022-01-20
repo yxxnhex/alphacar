@@ -222,7 +222,7 @@
         android:id="@+id/textView2"
         android:layout_width="750dp"
         android:layout_height="3dp"
-        android:background="#1d6395"
+        android:background="#686d82"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toEndOf="parent"
