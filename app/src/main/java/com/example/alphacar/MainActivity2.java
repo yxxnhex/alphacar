@@ -43,7 +43,8 @@ public class MainActivity2 extends AppCompatActivity {
         btnMyLoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent new Intent(getApplicationContext(), )
+                Intent intent = new Intent(getApplicationContext(),MyLocActivity.class );
+                startActivity(intent);
             }
         });
 
