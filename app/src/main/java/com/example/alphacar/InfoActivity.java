@@ -95,11 +95,11 @@ public class InfoActivity extends AppCompatActivity {
                     Log.e("jobject",jObject.getString("t_userinfo")+"");
 
                     vo = new infoVO();
-                    JSONObject jsonObject = jArray.getJSONObject()
-                    String user_phone = jObject.getString("t_userinfo");
-                    String ve_number = jObject.getString("ve_number");
-                    String ve_type = jObject.getString("ve_type");
-                    String energy_type = jObject.getString("energy_type");
+                    JSONObject jsonObject = jArray.getJSONObject(0);
+                    String user_phone = jsonObject.getString("user_phone");
+                    String ve_number = jsonObject.getString("ve_number");
+                    String ve_type = jsonObject.getString("ve_type");
+                    String energy_type = jsonObject.getString("energy_type");
 
                         Log.e("check" , user_phone);
                         Log.e("check" , ve_number);

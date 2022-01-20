@@ -8,15 +8,16 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DanActivity extends AppCompatActivity {
+    ImageView imgBtnHome, imgBtnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ImageView imgBtnHome, imgBtnBack;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dan);
         imgBtnHome = findViewById(R.id.imgBtnHome);
         imgBtnBack = findViewById(R.id.imgBtnBack);
 
-        // 메뉴 버튼
+        // home 버튼
         imgBtnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
