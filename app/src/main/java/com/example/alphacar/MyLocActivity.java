@@ -33,7 +33,7 @@ import com.pedro.library.AutoPermissions;
 import com.pedro.library.AutoPermissionsListener;
 
 public class MyLocActivity extends AppCompatActivity implements AutoPermissionsListener {
-    private Button button1, button2;
+    private ImageView button1, button2;
     private TextView textView1;
     LocationManager manager;
     GPSListener gpsListener;
@@ -55,7 +55,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
         setTitle("GPS 현재위치 확인하기");
 
         button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button1);
+
         textView1 = findViewById(R.id.textView1);
         imgBtnBack = findViewById(R.id.imgBtnBack);
         imgBtnMenu = findViewById(R.id.imgBtnMenu);

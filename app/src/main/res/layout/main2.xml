@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.82" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline72"
@@ -178,7 +178,7 @@
         android:backgroundTint="#e24c4b"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:text="사고 접수"
+        android:text="보험 접수"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
@@ -209,7 +209,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline76"
         app:layout_constraintStart_toStartOf="@+id/guideline75"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/xx" />
 
     <ImageView
         android:id="@+id/imgBtnMenu"
@@ -226,21 +226,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.39124486" />
+        app:layout_constraintGuide_percent="0.40" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline93"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.59" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline94"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.62" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline82"
@@ -253,7 +253,7 @@
         android:id="@+id/btnMyLoc"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:backgroundTint="#e24c4b"
+        android:backgroundTint="#686d82"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="위치 확인"
