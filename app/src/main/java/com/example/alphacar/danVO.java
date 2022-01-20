@@ -3,39 +3,39 @@ package com.example.alphacar;
 import java.util.Date;
 
 public class danVO {
-    private Date event_time;
-    private double latitude;
-    private double longitude;
+    private String event_time;
+    private String latitude;
+    private String longitude;
     private String event_type;
 
-    public danVO(Date event_time, double latitude, double longitude, String event_type) {
+    public danVO(String event_time, String latitude, String longitude, String event_type) {
         this.event_time = event_time;
         this.latitude = latitude;
         this.longitude = longitude;
         this.event_type = event_type;
     }
 
-    public Date getEvent_time() {
+    public String getEvent_time() {
         return event_time;
     }
 
-    public void setEvent_time(Date event_time) {
+    public void setEvent_time(String event_time) {
         this.event_time = event_time;
     }
 
-    public double getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public double getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 

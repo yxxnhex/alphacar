@@ -49,16 +49,18 @@ public class danAdapter extends BaseAdapter {
         TextView tvDT = view.findViewById(R.id.tvDT);
         TextView tvLoc = view.findViewById(R.id.tvLoc);
         TextView tvEvent = view.findViewById(R.id.tvEvent);
-        TextView tvColl = view.findViewById(R.id.tvEvent);
+        TextView tvColl = view.findViewById(R.id.tvColl);
 
         // Date -> String
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String eventTime = format.format(dan.get(i).getEvent_time());
+//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String eventTime = format.format(dan.get(i).getEvent_time());
 
         // latitude + longitude
         String loc = dan.get(i).getLatitude() + "\n" + dan.get(i).getLongitude();
 
-        tvDT.setText(eventTime);
+
+
+        tvDT.setText(dan.get(i).getEvent_time());
         tvLoc.setText(loc);
         tvEvent.setText(dan.get(i).getEvent_type());
         tvColl.setText(acc(loc));

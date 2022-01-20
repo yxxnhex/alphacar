@@ -142,8 +142,8 @@ public class MainActivity extends AppCompatActivity {
             imgWarning.setImageResource(R.drawable.back2);
 
         }else if(i== 2) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-            startActivity(intent);
+//            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+//            startActivity(intent);
         }
 
     }
