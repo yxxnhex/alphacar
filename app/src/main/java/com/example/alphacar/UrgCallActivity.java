@@ -46,6 +46,12 @@ public class UrgCallActivity extends AppCompatActivity {
                 finish();
             }
         });
+        imgBtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // 전화걸기 버튼
         btnCallNum1.setOnClickListener(new View.OnClickListener() {

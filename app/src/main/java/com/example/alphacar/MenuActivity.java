@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MenuActivity extends AppCompatActivity {
 
     ImageView imgBtnBack;
-    TextView btnMy, btnAccList, btnWarnCall;
+    TextView btnMy, btnAccList, btnWarnCall, btnLocation;
     private SharedPreferences preferences; // SharedPreferences 불러옴 (초기화)
 
     @Override
@@ -25,13 +25,17 @@ public class MenuActivity extends AppCompatActivity {
         btnAccList = findViewById(R.id.btnAccList);
         btnMy = findViewById(R.id.btnMy);
         btnWarnCall = findViewById(R.id.btnWarnCall);
+        btnLocation = findViewById(R.id.btnLocation);
         Log.e("id", "onCreate: "+preferences.getString("userid","")  ); // preferences.getString("userid","") -> 폴더에 저장되어있는 값을 불러옴(userid라는 이름으로 'test_id'가져옴)
         Log.e("pw", "onCreate: "+preferences.getString("userpw","")  );
+
+
         btnAccList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), DanActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         btnMy.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +43,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         btnWarnCall.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +51,15 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), UrgCallActivity.class);
                 startActivity(intent);
+                finish();
+            }
+        });
+        btnLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MyLocActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         imgBtnBack.setOnClickListener(new View.OnClickListener() {
