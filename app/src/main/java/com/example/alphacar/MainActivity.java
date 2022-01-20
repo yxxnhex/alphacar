@@ -102,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
     }
 
     // 뷰 끝났을때 / 화면이 안보일때
