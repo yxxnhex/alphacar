@@ -7,10 +7,12 @@
     android:orientation="vertical"
     tools:context=".MyLocActivity">
 
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:text="현재위치 확인하기"/>
+        android:layout_width="352dp"
+        android:layout_height="36dp"
+        android:text="현재위치 확인하기" />
 
     <TextView
         android:id="@+id/textView1"
@@ -19,13 +21,14 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:text="구글지도맵 내위치"/>
+        android:layout_width="394dp"
+        android:layout_height="wrap_content"
+        android:text="구글지도맵 내위치" />
 
     <fragment
         android:id="@+id/map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.google.android.gms.maps.SupportMapFragment"/>
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="212dp"
+        android:layout_height="185dp" />
 
 </LinearLayout>

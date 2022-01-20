@@ -192,7 +192,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:srcCompat="@drawable/cn1" />
+        app:srcCompat="@drawable/cn3" />
 
     <ImageView
         android:id="@+id/imgBtnBack"

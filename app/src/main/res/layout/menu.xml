@@ -153,7 +153,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_b" />
+        app:srcCompat="@drawable/back" />
 
     <TextView
         android:id="@+id/textView8"

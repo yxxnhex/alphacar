@@ -39,7 +39,7 @@ public class InfoActivity extends AppCompatActivity {
         tvPhoneNum = findViewById(R.id.tvPhoneNum);
         tvCarNum = findViewById(R.id.tvCarNum);
         tvCarName = findViewById(R.id.tvCarName);
-        tvCarGas = findViewById(R.id.tvCarGas);
+        tvCarGas = findViewById(R.id.textView);
 
 
         // 홈 버튼
