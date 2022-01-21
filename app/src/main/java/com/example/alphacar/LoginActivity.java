@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
         ActivityCompat.requestPermissions(this,INITIAL_PERMS, 1000);
+        Log.e("permission", "coast: "+ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)+
+                ",fine: "+ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)+
+                ", granted: "+PackageManager.PERMISSION_GRANTED);
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=  PackageManager.PERMISSION_GRANTED||
                 ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)!=  PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,INITIAL_PERMS, 1000);

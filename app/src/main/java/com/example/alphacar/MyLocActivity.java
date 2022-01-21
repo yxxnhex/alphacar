@@ -284,6 +284,9 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
 
     @Override
     public void onDenied(int requestCode, String[] permissions) {
+        for(int i=0;i<permissions.length; i++){
+            Log.e("denied", "onDenied: "+permissions[i]);
+        }
         Toast.makeText(getApplicationContext(),"permissions denied : " + permissions.length, Toast.LENGTH_SHORT).show();
     }
 
