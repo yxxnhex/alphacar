@@ -1,6 +1,7 @@
 package com.example.alphacar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +30,7 @@ public class InfoActivity extends AppCompatActivity {
 
     TextView tvPhoneNum, tvCarNum, tvCarName, tvCarGas;
     ImageView imgBtnHome, imgBtnBack;
+    private SharedPreferences preferences; // SharedPreferences 불러옴 (초기화)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,9 @@ public class InfoActivity extends AppCompatActivity {
         tvCarName = findViewById(R.id.tvCarName);
         tvCarGas = findViewById(R.id.textView);
 
+        preferences = getSharedPreferences("login_session", MODE_PRIVATE);
+        String userId = preferences.getString("userid", "");
+        String url = "http://172.30.1.60:5000/select_t_userinfo";
 
         // 홈 버튼
         imgBtnHome.setOnClickListener(new View.OnClickListener() {
@@ -60,11 +65,8 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
 
-        String url = "http://172.30.1.2:5000/select_t_userinfo";
-        String user_phone_num = "010-333-6666";
-
         RequestBody formbody = new FormBody.Builder()
-                .add("user_phone_num",user_phone_num) // 요청값 보내기
+                .add("userId",userId) // 요청값 보내기
                 .build();
 
 //        요청

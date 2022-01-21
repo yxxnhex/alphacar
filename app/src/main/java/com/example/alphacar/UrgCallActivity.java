@@ -36,6 +36,11 @@ public class UrgCallActivity extends AppCompatActivity {
     TextView tvWarnNum1, tvWarnNum2, tvWNName1, tvWNName2;
     private SharedPreferences preferences; // SharedPreferences 불러옴 (초기화)
 
+    String car_ins_call = "";
+    String life_ins_call = "";
+    String em_call1 = "";
+    String em_call2 = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +63,7 @@ public class UrgCallActivity extends AppCompatActivity {
         tvWNName1 = findViewById(R.id.tvWNName1);
         tvWNName2 = findViewById(R.id.tvWNName2);
 
-        final String[] car_ins_call = {""};
-        final String[] life_ins_call = {""};
-        final String[] em_call1 = {""};
-        final String[] em_call2 = {""};
+
 
         preferences = getSharedPreferences("login_session", MODE_PRIVATE); // 'login_session'이라는 폴더를 불러옴
         final String userId = preferences.getString("userid", "");
@@ -89,21 +91,17 @@ public class UrgCallActivity extends AppCompatActivity {
                     JSONObject jObject = new JSONObject(result);
                     JSONArray jArray = jObject.getJSONArray("urg_call");
                     JSONObject jsonObject = jArray.getJSONObject(0);
-                    String user_phone = jsonObject.getString("user_phone");
-                    em_call1[0] = jsonObject.getString("em_call1");
-                    em_call2[0] = jsonObject.getString("em_call2");
-                    car_ins_call[0] = jsonObject.getString("car_ins_call");
-                    life_ins_call[0] = jsonObject.getString("life_ins_call");
+                    em_call1 = jsonObject.getString("em_call1");
+                    em_call2 = jsonObject.getString("em_call2");
+                    car_ins_call = jsonObject.getString("car_ins_call");
+                    life_ins_call = jsonObject.getString("life_ins_call");
                     String car_insure_name = jsonObject.getString("car_insure_name");
                     String life_insure_name = jsonObject.getString("life_insure_name");
 
-                    if (userId.equals(user_phone)) {
-                        tvInsuName1.setText(car_insure_name);
-                        tvInsuName2.setText(life_insure_name);
-                        tvWNName1.setText(em_call1[0]);
-                        tvWNName2.setText(em_call2[0]);
-                    }
-
+                    tvInsuName1.setText(car_insure_name);
+                    tvInsuName2.setText(life_insure_name);
+                    tvWNName1.setText(em_call1);
+                    tvWNName2.setText(em_call2);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -115,9 +113,8 @@ public class UrgCallActivity extends AppCompatActivity {
         imgBtnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         imgBtnBack.setOnClickListener(new View.OnClickListener() {
@@ -131,8 +128,8 @@ public class UrgCallActivity extends AppCompatActivity {
         btnCallNum1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (car_ins_call[0] != null) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+ car_ins_call[0]));
+                if (car_ins_call != null) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+ car_ins_call));
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "등록된 번호가 없습니다", Toast.LENGTH_SHORT).show();
@@ -142,8 +139,8 @@ public class UrgCallActivity extends AppCompatActivity {
         btnCallNum2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (life_ins_call[0] != null) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:" + life_ins_call[0]));
+                if (life_ins_call != null) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:" + life_ins_call));
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "등록된 번호가 없습니다", Toast.LENGTH_SHORT).show();
@@ -153,8 +150,8 @@ public class UrgCallActivity extends AppCompatActivity {
         btnCallNum3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (em_call1[0] != null) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:" + em_call1[0]));
+                if (em_call1 != null) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:" + em_call1));
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "등록된 번호가 없습니다", Toast.LENGTH_SHORT).show();
@@ -164,8 +161,8 @@ public class UrgCallActivity extends AppCompatActivity {
         btnCallNum4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (em_call2[0] != null) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:" + em_call2[0]));
+                if (em_call2 != null) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:" + em_call2));
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "등록된 번호가 없습니다", Toast.LENGTH_SHORT).show();
