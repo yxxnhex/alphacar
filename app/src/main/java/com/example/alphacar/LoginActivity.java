@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -107,6 +108,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 SharedPreferences.Editor editor = preferences.edit(); // 폴더를 수정하기 위해서는 editor를 불러와야 함
+                boolean loginCheck = false;
 
                 String userId = edtId.getText().toString();
                 String userPw = edtPw.getText().toString();
@@ -116,10 +118,17 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString("userid",userId); // editor를 통해 폴더에 'userid'라는 이름으로 'test_id'를 넣음(나중에 userid로 불러옴)
                         editor.putString("userpw",userPw);
                         editor.commit(); // 수정 후에는 반드시 commit을 해주어야 저장됨
-                        startActivity(intent);
-                        finish();
+                        loginCheck = true;
                     }
                 }
+                if (loginCheck) {
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 다시 확인해주세요", Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         });
 
