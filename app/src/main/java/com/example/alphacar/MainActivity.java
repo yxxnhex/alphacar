@@ -6,7 +6,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
     Animation anime;
     LinearLayout lin_test;
     private boolean condition = true;
+    int streamId;
+    int soundId;
+    SoundPool sound;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 //        clMain = findViewById(R.id.clMain);
         MyThread myThread2 = new MyThread(imgWarning);
         myThread2.start();
-        // 애니메이션 확인용 버튼
+        // 애니메이션용
         lin_test = findViewById(R.id.lin_test);
 
         // 애니메이션 효과부분
@@ -67,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        // 사운드 부분
+        sound = new SoundPool(1, AudioManager.STREAM_ALARM, 0);
+        soundId = sound.load(this, R.raw.bibip, 1);
+
 
         // 비디오 출력부분
         // raw라는 리소스 폴더 만들어서 거기에 영상을 저장
@@ -102,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         condition = false;
+
         if (vidMain != null) vidMain.stopPlayback();
     }
 
@@ -113,11 +125,15 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.cn3);
             tvWarning.setText("!좌측!위험!");
+            streamId = sound.play(soundId, 1.0F, 1.0F,  1,  -1,  1.0F);
+
         } else if (i == 0) {
             lin_test.setBackgroundColor(Color.parseColor("#00000000"));
             lin_test.clearAnimation();
             imgWarning.setImageResource(R.drawable.cn6);
             tvWarning.setText("안전합니다.");
+            sound.stop(streamId);
+
 
         } else if (i == -1) {
             Intent intent = new Intent(getApplicationContext(), MainActivity2.class);

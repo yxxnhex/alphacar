@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/dan.xml" value="0.5506658946149392" />
+        <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/dan.xml" value="0.5" />
         <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/dan_list.xml" value="0.25" />
         <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/home.xml" value="0.365625" />
         <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/info.xml" value="0.365625" />
@@ -12,22 +12,29 @@
         <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/main2.xml" value="0.25" />
         <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/menu.xml" value="0.365625" />
         <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/my_loc.xml" value="0.1" />
-        <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/sound.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/CGI/AndroidStudy/a_car/app/src/main/res/layout/urg_call.xml" value="0.365625" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/a_car/app/src/main/res/layout/my_loc.xml" value="0.2046875" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/edit.xml" value="0.1" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/icon.xml" value="0.1" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/imgbtn.xml" value="0.1037037037037037" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/radius.xml" value="0.2671875" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/radius_r.xml" value="0.1" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/textview.xml" value="0.1037037037037037" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/textview_bottom.xml" value="0.1037037037037037" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/drawable/textview_rectangle.xml" value="0.1037037037037037" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/acc.xml" value="0.246875" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/acc_menu.xml" value="0.33" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/dan.xml" value="0.5" />
-        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/home.xml" value="0.33" />
-        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/info.xml" value="0.5" />
-        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/login.xml" value="0.5" />
-        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/main.xml" value="0.33" />
-        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/main2.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/dan.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/dan_list.xml" value="0.3109375" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/home.xml" value="0.25" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/info.xml" value="0.25" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/login.xml" value="0.25" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/main.xml" value="0.25" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/main2.xml" value="0.25" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/menu.xml" value="0.33" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/my_loc.xml" value="0.3109375" />
+        <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/sound.xml" value="0.18385416666666668" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/start.xml" value="0.33" />
         <entry key="..\:/Users/smhrd/Desktop/2rd project/AlphaCar/app/src/main/res/layout/urg_call.xml" value="0.33" />
       </map>

@@ -25,13 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.76" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline90"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.77" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -98,13 +91,6 @@
         app:layout_constraintGuide_percent="0.51" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline103"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.29" />
+        app:layout_constraintGuide_percent="0.31" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline45"
@@ -155,6 +141,13 @@
         app:layout_constraintGuide_percent="0.20" />
 
     <!-- 시계 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline118"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
     <DigitalClock
         android:id="@+id/digitalClock"
         android:layout_width="0dp"
@@ -191,15 +184,12 @@
     <TextView
         android:id="@+id/textView23"
         android:layout_width="0dp"
-        android:layout_height="3dp"
+        android:layout_height="1dp"
         android:background="#686d82"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
-        app:layout_constraintEnd_toStartOf="@+id/guideline56"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline91"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
         android:id="@+id/textView8"
@@ -212,7 +202,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline78"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
@@ -235,7 +225,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView12"
@@ -248,7 +238,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline79"
         app:layout_constraintStart_toStartOf="@+id/guideline83"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView13"
@@ -260,8 +250,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline55"
-        app:layout_constraintStart_toStartOf="@+id/guideline84"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintStart_toStartOf="@+id/guideline79"
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView15"
@@ -273,8 +263,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
-        app:layout_constraintStart_toStartOf="@+id/guideline90"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintStart_toStartOf="@+id/guideline55"
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView2"
@@ -291,64 +281,70 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="0dp"
-        android:layout_height="3dp"
-        android:background="#686d82"
+        android:layout_height="1dp"
+        android:background="#686D82"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
-        app:layout_constraintEnd_toStartOf="@+id/guideline56"
-        app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline91"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#686D82"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline118"
+        app:layout_constraintEnd_toStartOf="@+id/guideline91"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="0dp"
-        android:background="#686d82"
+        android:background="#73686D82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline83"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="0dp"
-        android:background="#686d82"
+        android:background="#73686D82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
-        app:layout_constraintEnd_toStartOf="@+id/guideline84"
-        app:layout_constraintStart_toStartOf="@+id/guideline103"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline79"
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="0dp"
-        android:background="#686d82"
+        android:background="#73686D82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
-        app:layout_constraintEnd_toStartOf="@+id/guideline90"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
         app:layout_constraintStart_toStartOf="@+id/guideline104"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="0dp"
-        android:background="#686d82"
+        android:background="#686D82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline48"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="0dp"
-        android:background="#686d82"
+        android:background="#686D82"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline91"
-        app:layout_constraintStart_toStartOf="@+id/guideline56"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

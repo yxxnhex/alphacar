@@ -37,7 +37,7 @@ public class SoundActivity extends AppCompatActivity implements View.OnClickList
                 .build();
 
         Uri bipUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.bibip);
-        sound = soundPool.load(this, R.raw.bibip, 1);
+//        sound = soundPool.load(this, R.raw.bibip, 1);
         btnSound = findViewById(R.id.btnSound);
         btnSound.setOnClickListener(this);
     }

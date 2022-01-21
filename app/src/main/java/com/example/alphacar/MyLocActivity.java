@@ -172,7 +172,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
         public void onLocationChanged(Location location) {
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
-            String message = "내 위치는 Latitude : " + latitude + "\nLongtitude : " + longitude;
+            String message = "위도(Latitude)\n" + latitude + "\n\n경도(Longtitude)\n" + longitude;
             textView1.setText(message);
 
             showCurrentLocation(latitude,longitude);
