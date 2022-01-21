@@ -172,7 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.31" />
+        app:layout_constraintGuide_percent="0.33" />
 
 
 
@@ -369,8 +369,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
+        android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline77"
         app:layout_constraintEnd_toStartOf="@+id/guideline133"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -381,8 +384,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
+        android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline68"
         app:layout_constraintEnd_toStartOf="@+id/guideline133"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -393,8 +399,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
+        android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
         app:layout_constraintEnd_toStartOf="@+id/guideline133"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -405,8 +414,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
+        android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline53"
         app:layout_constraintEnd_toStartOf="@+id/guideline133"
         app:layout_constraintStart_toStartOf="@+id/guideline3"

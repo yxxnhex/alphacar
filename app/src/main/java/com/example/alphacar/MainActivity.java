@@ -124,14 +124,14 @@ public class MainActivity extends AppCompatActivity {
             lin_test.startAnimation(anime);
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.cn3);
-            tvWarning.setText("!좌측!위험!");
+            tvWarning.setText("좌측전방\n추돌주의");
             streamId = sound.play(soundId, 1.0F, 1.0F,  1,  -1,  1.0F);
 
         } else if (i == 0) {
             lin_test.setBackgroundColor(Color.parseColor("#00000000"));
             lin_test.clearAnimation();
             imgWarning.setImageResource(R.drawable.cn6);
-            tvWarning.setText("안전합니다.");
+            tvWarning.setText("안전");
             sound.stop(streamId);
 
 

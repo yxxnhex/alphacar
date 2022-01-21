@@ -28,7 +28,7 @@
         android:theme="@style/Theme.AlphaCar"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".HomeActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -74,7 +74,7 @@
             android:name=".MyLocActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
