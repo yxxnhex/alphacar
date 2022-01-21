@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvWarning, tvSpeed;
     VideoView vidMain;
     ImageView imgBtnMenu, imgWarning, imgBtnBack;
-    Animation anime, anime2;
-    Button btn111;
-    ConstraintLayout clMain;
+    Animation anime;
     LinearLayout lin_test;
 
     @Override
@@ -46,37 +44,10 @@ public class MainActivity extends AppCompatActivity {
         MyThread myThread2 = new MyThread(imgWarning);
         myThread2.start();
         // 애니메이션 확인용 버튼
-//        btn111 = findViewById(R.id.btn111);
         lin_test = findViewById(R.id.lin_test);
 
         // 애니메이션 효과부분
         anime = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anime);
-
-//        btn111.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                clMain.startAnimation(anime);
-////                clMain.setBackgroundColor(Color.parseColor("#66f08080"));
-////                vidMain.startAnimation(anime);
-//                lin_test.startAnimation(anime);
-//                lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
-//                imgWarning.setImageResource(R.drawable.hamburger);
-//
-//                btn111.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-////                        clMain.setBackgroundColor(Color.WHITE);
-////                        clMain.clearAnimation();
-////                        vidMain.clearAnimation();
-//                        lin_test.setBackgroundColor(Color.parseColor("#00000000"));
-//                        lin_test.clearAnimation();
-//                        imgWarning.setImageResource(R.drawable.near);
-//
-//                    }
-//                });
-
-//            }
-//        });
 
         // 메뉴 버튼
         imgBtnMenu.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -130,20 +102,26 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         if (vidMain != null) vidMain.stopPlayback();
     }
+
+    // 애니메이션 구간 효과 넣어보기
+    // 1일때 위험, -1일때, 사고, 0일때 안전
     public void warning(int i){
         if(i == 1 ){
             lin_test.startAnimation(anime);
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.back);
+            tvWarning.setText("!좌측!위험!");
         }
-        else if(i == -1 ){
+        else if(i == 0 ){
             lin_test.setBackgroundColor(Color.parseColor("#00000000"));
             lin_test.clearAnimation();
             imgWarning.setImageResource(R.drawable.back2);
+            tvWarning.setText("안전합니다.");
 
-        }else if(i== 2) {
-//            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-//            startActivity(intent);
+        }else if(i== -1) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(intent);
+            finish();
         }
 
     }
@@ -154,10 +132,6 @@ public class MainActivity extends AppCompatActivity {
             int num = msg.arg1;
             ImageView iv = (ImageView) msg.obj;
             warning(num);
-
-
-
-
         }
     };
 
@@ -169,23 +143,19 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void run() {
-            for (int i = 30; i > 0; i--){
+            for (int i = 0; i < 41; i++){
                 try {
                     Thread.sleep(1000);
                     Message message = new Message();
 
-                    if( i == 20 ) {
+                    if( 10<= i && i <20 ) {
 
                         message.arg1 = 1;
                         // 0일 경우 안전
                         message.obj = iv;
-                    }else if(i == 15){
-                        message.arg1 = -1;
-                        // 0일 경우 안전
-                        message.obj = iv;
                     }
-                    else if(i == 10){
-                        message.arg1 = 2;
+                    else if(i == 30){
+                        message.arg1 = -1;
                         // 0일 경우 안전
                         message.obj = iv;
                     }
