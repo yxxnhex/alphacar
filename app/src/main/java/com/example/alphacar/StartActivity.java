@@ -19,7 +19,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.start);
 
         videoView = findViewById(R.id.videoView);
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.start);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.start2);
 
         videoView.setVideoURI(videoUri);
 
@@ -27,6 +27,7 @@ public class StartActivity extends AppCompatActivity {
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
+
 
                 videoView.start();
 
@@ -40,7 +41,7 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000);
+        }, 3000);
 
     }
     // 뷰 끝났을때 / 화면이 안보일때
