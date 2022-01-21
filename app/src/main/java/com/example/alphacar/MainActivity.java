@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgBtnMenu, imgWarning, imgBtnBack;
     Animation anime;
     LinearLayout lin_test;
+    private boolean condition = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,80 +101,83 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        condition = false;
         if (vidMain != null) vidMain.stopPlayback();
     }
 
     // 애니메이션 구간 효과 넣어보기
     // 1일때 위험, -1일때, 사고, 0일때 안전
-    public void warning(int i){
-        if(i == 1 ){
+    public void warning(int i) {
+        if (i == 1) {
             lin_test.startAnimation(anime);
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
-            imgWarning.setImageResource(R.drawable.back);
+            imgWarning.setImageResource(R.drawable.cn3);
             tvWarning.setText("!좌측!위험!");
-        }
-        else if(i == 0 ){
+        } else if (i == 0) {
             lin_test.setBackgroundColor(Color.parseColor("#00000000"));
             lin_test.clearAnimation();
-            imgWarning.setImageResource(R.drawable.back2);
+            imgWarning.setImageResource(R.drawable.cn6);
             tvWarning.setText("안전합니다.");
 
-        }else if(i== -1) {
+        } else if (i == -1) {
             Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
             startActivity(intent);
             finish();
+
         }
 
     }
 
-    Handler handler = new Handler(){
+    Handler handler = new Handler() {
         @Override
         public void handleMessage(@NonNull Message msg) {
-            int num = msg.arg1;
-            ImageView iv = (ImageView) msg.obj;
-            warning(num);
+            if (condition) {
+                int num = msg.arg1;
+                ImageView iv = (ImageView) msg.obj;
+                warning(num);
+            }
+
         }
     };
 
     class MyThread extends Thread {
         ImageView iv;
-        public MyThread(ImageView iv){
+
+        public MyThread(ImageView iv) {
             this.iv = iv;
         }
 
         @Override
         public void run() {
-            for (int i = 0; i < 41; i++){
+
+            for (int i = 0; i < 31; i++) {
                 try {
                     Thread.sleep(1000);
                     Message message = new Message();
 
-                    if( 10<= i && i <20 ) {
+                    if (10 <= i && i < 16) {
 
                         message.arg1 = 1;
                         // 0일 경우 안전
                         message.obj = iv;
-                    }
-                    else if(i == 30){
+                    } else if (i == 20) {
                         message.arg1 = -1;
                         // 0일 경우 안전
                         message.obj = iv;
-                    }
-                    else{
+                    } else {
                         message.arg1 = 0;
                         // 0일 경우 안전
                         message.obj = iv;
                     }
-
-
-
                     handler.sendMessage(message);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+
                 }
             }
         }
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
