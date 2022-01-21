@@ -12,12 +12,14 @@ import android.widget.VideoView;
 public class StartActivity extends AppCompatActivity {
 
     VideoView videoView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
+
         videoView = findViewById(R.id.videoView);
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.homelogo);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.start2);
 
         videoView.setVideoURI(videoUri);
 
@@ -25,6 +27,7 @@ public class StartActivity extends AppCompatActivity {
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
+
 
                 videoView.start();
 
@@ -34,11 +37,11 @@ public class StartActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
-        }, 1200);
+        }, 3000);
 
     }
     // 뷰 끝났을때 / 화면이 안보일때
