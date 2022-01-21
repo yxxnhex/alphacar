@@ -45,9 +45,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
-
-
         ActivityCompat.requestPermissions(this,INITIAL_PERMS, 1000);
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=  PackageManager.PERMISSION_GRANTED||
                 ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)!=  PackageManager.PERMISSION_GRANTED) {
@@ -63,9 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         edtId = findViewById(R.id.edtId);
         edtPw = findViewById(R.id.edtPw);
 
-        String url = "http://172.30.1.2:5000/select_t_userinfo_login";
-        String userId = edtId.getText().toString();
-        String userPw = edtPw.getText().toString();
+        String url = "http://172.30.1.60:5000/select_t_userinfo_login";
 
         RequestBody formbody = new FormBody.Builder()
 //                .add("userId",userId).add("userPw",userPw)
@@ -108,6 +103,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 SharedPreferences.Editor editor = preferences.edit(); // 폴더를 수정하기 위해서는 editor를 불러와야 함
+
+                String userId = edtId.getText().toString();
+                String userPw = edtPw.getText().toString();
 
                 for (int i = 0; i < ArrUserId.size(); i++) {
                     if (userId.equals(ArrUserId.get(i)) && userPw.equals(ArrUserPw.get(i))) {
