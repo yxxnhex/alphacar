@@ -43,6 +43,13 @@
         app:layout_constraintGuide_percent="0.09" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline135"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,28 +96,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.18" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline95"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline97"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.20" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline98"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.34" />
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline136"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline100"
@@ -163,7 +177,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hom2" />
+        app:srcCompat="@drawable/home_g" />
 
     <ImageView
         android:id="@+id/imgBtnBack"
@@ -173,12 +187,13 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
         app:layout_constraintStart_toStartOf="@+id/guideline55"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back_w" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:gravity="center"
         android:text="　　　현재 위치"
         android:textAlignment="viewStart"
@@ -187,10 +202,10 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline51" />
+        app:layout_constraintTop_toTopOf="@+id/guideline135" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/line"
         android:layout_width="750dp"
         android:layout_height="3dp"
         android:background="#686d82"
@@ -202,9 +217,32 @@
         app:layout_constraintTop_toTopOf="@+id/guideline47" />
 
     <TextView
+        android:id="@+id/line13"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#73686D82"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline136"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toTopOf="@+id/guideline98" />
+
+    <TextView
+        android:id="@+id/line14"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#73686D82"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline136"
+        app:layout_constraintEnd_toStartOf="@+id/guideline45"
+        app:layout_constraintStart_toStartOf="@+id/guideline99"
+        app:layout_constraintTop_toTopOf="@+id/guideline98" />
+
+    <TextView
         android:id="@+id/textView7"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="위도 / 경도"
         android:textColor="#FFFFFF"
@@ -220,18 +258,21 @@
         android:id="@+id/textView1"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acr"
         android:gravity="center"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline100"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toTopOf="@+id/guideline98" />
+        app:layout_constraintTop_toTopOf="@+id/guideline136" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="지도"
         android:textColor="#FFFFFF"
@@ -250,7 +291,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline45"
         app:layout_constraintStart_toStartOf="@+id/guideline99"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toTopOf="@+id/guideline136" />
 
     <ImageView
         android:id="@+id/button1"
@@ -260,6 +301,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
         app:layout_constraintTop_toTopOf="@+id/guideline101"
-        app:srcCompat="@drawable/loc" />
+        app:srcCompat="@drawable/btnloc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

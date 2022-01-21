@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.13" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline46"
@@ -161,6 +161,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:text="@string/acc"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -176,6 +177,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="#e24c4b"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="보험 접수"
@@ -191,6 +193,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="#e24c4b"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="119"
@@ -209,7 +212,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline76"
         app:layout_constraintStart_toStartOf="@+id/guideline75"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/xx" />
+        app:srcCompat="@drawable/out_g" />
 
     <ImageView
         android:id="@+id/imgBtnMenu"
@@ -219,7 +222,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/list" />
+        app:srcCompat="@drawable/menu" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline81"
@@ -254,6 +257,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="#686d82"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="위치 확인"

@@ -151,14 +151,14 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/list" />
+        app:srcCompat="@drawable/menu" />
 
     <TextView
         android:id="@+id/tvWarning"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
-        android:text="TextView"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -169,6 +169,7 @@
         android:id="@+id/tvSpeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare_aceb"
         app:layout_constraintBottom_toTopOf="@+id/guideline67"
         app:layout_constraintEnd_toStartOf="@+id/guideline59"
         app:layout_constraintStart_toStartOf="@+id/guideline60"
@@ -194,7 +195,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/xx" />
+        app:srcCompat="@drawable/out_g" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -212,8 +213,8 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

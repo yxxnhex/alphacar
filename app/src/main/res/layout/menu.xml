@@ -7,18 +7,11 @@
     android:background="#040C2F">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline73"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.86" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline74"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.78" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -28,11 +21,11 @@
         app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline51"
+        android:id="@+id/guideline73"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.09" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -116,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.15" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -127,48 +120,35 @@
         app:layout_constraintGuide_percent="0.20" />
 
     <!--시계-->
-    <DigitalClock
-        android:id="@+id/digitalClock"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#48DEE4EF"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_test"
+        android:layout_width="518dp"
+        android:layout_height="449dp"
+        android:layout_marginStart="376dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobig" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="750dp"
-        android:layout_height="3dp"
-        android:background="#686d82"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline50"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C6040C2F"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline47" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/line"
+        android:id="@+id/line6"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="#73686D82"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintEnd_toStartOf="@+id/guideline74"
-        app:layout_constraintStart_toStartOf="@+id/guideline48" />
-
-    <TextView
-        android:id="@+id/line2"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#73686D82"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintBottom_toTopOf="@+id/guideline96"
         app:layout_constraintEnd_toStartOf="@+id/guideline74"
         app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
@@ -193,12 +173,47 @@
         app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
-        android:id="@+id/line6"
+        android:id="@+id/line"
+        android:layout_width="750dp"
+        android:layout_height="3dp"
+        android:background="#686d82"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline47" />
+
+    <TextView
+        android:id="@+id/line"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="#73686D82"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline96"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toStartOf="@+id/guideline74"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
+
+    <DigitalClock
+        android:id="@+id/digitalClock"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#48DEE4EF"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#73686D82"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline74"
         app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
@@ -210,12 +225,13 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back_w" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:gravity="center"
         android:text="　　　메뉴"
         android:textAlignment="viewStart"
@@ -224,18 +240,19 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline51" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
         android:id="@+id/btnLocation"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="　　　나의 위치 확인"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
 
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
         app:layout_constraintEnd_toStartOf="@+id/guideline74"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
@@ -245,26 +262,30 @@
         android:id="@+id/btnWarnCall"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="　　　긴급 연락"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
 
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline74"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/btnMy"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="　　　나의 정보"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline74"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
@@ -274,12 +295,13 @@
         android:id="@+id/btnAccList"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="　　　돌발 상황 기록"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
 
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline69"
         app:layout_constraintEnd_toStartOf="@+id/guideline74"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
@@ -290,11 +312,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="　　　로그아웃"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline96"
         app:layout_constraintEnd_toStartOf="@+id/guideline74"
         app:layout_constraintStart_toStartOf="@+id/guideline48"

@@ -49,13 +49,6 @@
         app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.09" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -148,6 +141,27 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.22" />
 
+    <ImageView
+        android:id="@+id/img_test4"
+        android:layout_width="518dp"
+        android:layout_height="449dp"
+        android:layout_marginStart="376dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobig" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C6040C2F"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <DigitalClock
         android:id="@+id/digitalClock"
         android:layout_width="0dp"
@@ -169,7 +183,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hom2" />
+        app:srcCompat="@drawable/home_g" />
 
     <ImageView
         android:id="@+id/imgBtnBack"
@@ -179,7 +193,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
         app:layout_constraintStart_toStartOf="@+id/guideline55"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back_w" />
 
     <TextView
         android:id="@+id/textView23"
@@ -195,15 +209,16 @@
         android:id="@+id/textView8"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:gravity="center"
-        android:text="돌발 상황 기록"
+        android:text="　　　돌발 상황 기록"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline78"
-        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <ListView
@@ -218,9 +233,11 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="날짜 / 시간"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
@@ -231,9 +248,11 @@
         android:id="@+id/textView12"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="사고장소"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline79"
@@ -244,9 +263,11 @@
         android:id="@+id/textView13"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="사고 방향"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline55"
@@ -257,9 +278,11 @@
         android:id="@+id/textView15"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="충돌"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
@@ -267,7 +290,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/line"
         android:layout_width="750dp"
         android:layout_height="3dp"
         android:background="#686d82"

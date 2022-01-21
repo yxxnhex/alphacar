@@ -7,11 +7,36 @@
     android:background="#040C2F "
     tools:context=".SignUpActivity">
 
+    <ImageView
+        android:id="@+id/img_test3"
+        android:layout_width="490dp"
+        android:layout_height="551dp"
+        android:layout_marginStart="148dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logobig" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C6040C2F"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="#686d82"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:paddingLeft="0dp"
@@ -20,7 +45,7 @@
         android:paddingBottom="0dp"
         android:text="가입하기"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:iconPadding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline129"
         app:layout_constraintEnd_toStartOf="@+id/guideline110"
@@ -46,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.35" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline132"
@@ -60,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.23" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline116"
@@ -74,21 +99,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.82" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline114"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.77" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline110"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.68" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline107"
@@ -102,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.23" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline115"
@@ -111,23 +136,21 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.31" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline108"
-        app:layout_constraintEnd_toStartOf="@+id/guideline110"
-        app:layout_constraintStart_toStartOf="@+id/guideline109"
-        app:layout_constraintTop_toTopOf="@+id/guideline107"
-        app:srcCompat="@drawable/logobig" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline111"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#686d82"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.34" />
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline103"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#686d82"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.74" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline120"
@@ -207,19 +230,20 @@
         android:layout_height="wrap_content"
         android:background="#686d82"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.82" />
+        app:layout_constraintGuide_percent="0.81" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline112"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.27" />
+        app:layout_constraintGuide_percent="0.11" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_aceb"
         android:gravity="center"
         android:text="회 원 가 입"
         android:textColor="#FFFFFF"
@@ -235,10 +259,12 @@
         android:id="@+id/textView24"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="휴대폰 번호　"
         android:textAlignment="viewEnd"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline121"
         app:layout_constraintEnd_toStartOf="@+id/guideline132"
         app:layout_constraintStart_toStartOf="@+id/guideline116"
@@ -248,10 +274,12 @@
         android:id="@+id/textView25"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="차량 번호　"
         android:textAlignment="viewEnd"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline123"
         app:layout_constraintEnd_toStartOf="@+id/guideline132"
         app:layout_constraintStart_toStartOf="@+id/guideline116"
@@ -261,10 +289,12 @@
         android:id="@+id/textView26"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="차량 모델　"
         android:textAlignment="viewEnd"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline125"
         app:layout_constraintEnd_toStartOf="@+id/guideline132"
         app:layout_constraintStart_toStartOf="@+id/guideline116"
@@ -274,10 +304,12 @@
         android:id="@+id/textView27"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/nanumsquare_acb"
         android:gravity="center"
         android:text="주유 구분　"
         android:textAlignment="viewEnd"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline127"
         app:layout_constraintEnd_toStartOf="@+id/guideline132"
         app:layout_constraintStart_toStartOf="@+id/guideline116"
@@ -287,9 +319,9 @@
         android:id="@+id/tvPhoneNum"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="#73FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline121"
         app:layout_constraintEnd_toStartOf="@+id/guideline114"
@@ -300,9 +332,9 @@
         android:id="@+id/tvCarNum"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="#73FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline123"
         app:layout_constraintEnd_toStartOf="@+id/guideline114"
@@ -313,9 +345,9 @@
         android:id="@+id/tvCarName"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="#73FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline125"
         app:layout_constraintEnd_toStartOf="@+id/guideline114"
@@ -326,9 +358,9 @@
         android:id="@+id/tvCarGas"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="#73FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline127"
         app:layout_constraintEnd_toStartOf="@+id/guideline114"
