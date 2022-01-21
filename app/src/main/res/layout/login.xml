@@ -184,9 +184,10 @@
 
         android:backgroundTint="#686d82 "
         android:ems="10"
-        android:hint="휴대폰 번호"
+        android:hint="휴대폰 번호 입력"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="#686d82"
         app:layout_constraintBottom_toTopOf="@+id/guideline39"
         app:layout_constraintEnd_toStartOf="@+id/guideline35"
         app:layout_constraintStart_toStartOf="@+id/guideline44"
@@ -199,9 +200,10 @@
 
         android:backgroundTint="#686d82 "
         android:ems="10"
-        android:hint="비밀번호"
+        android:hint="비밀번호 입력"
         android:inputType="textPassword"
         android:textColor="@color/white"
+        android:textColorHint="#686d82"
         app:layout_constraintBottom_toTopOf="@+id/guideline42"
         app:layout_constraintEnd_toStartOf="@+id/guideline35"
         app:layout_constraintHorizontal_bias="0.0"

@@ -41,7 +41,7 @@ public class InfoActivity extends AppCompatActivity {
         tvPhoneNum = findViewById(R.id.tvPhoneNum);
         tvCarNum = findViewById(R.id.tvCarNum);
         tvCarName = findViewById(R.id.tvCarName);
-        tvCarGas = findViewById(R.id.textView);
+        tvCarGas = findViewById(R.id.tvCarGas);
 
         preferences = getSharedPreferences("login_session", MODE_PRIVATE);
         String userId = preferences.getString("userid", "");
