@@ -1,6 +1,7 @@
 package com.example.alphacar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,6 +33,7 @@ public class DanActivity extends AppCompatActivity {
     ListView danList;
     danAdapter adapter;
     ArrayList<danVO> dan = new ArrayList<>();
+    private SharedPreferences preferences; // SharedPreferences 불러옴 (초기화)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,10 @@ public class DanActivity extends AppCompatActivity {
         danList = findViewById(R.id.danList);
         imgBtnHome = findViewById(R.id.imgBtnMenu);
         imgBtnBack = findViewById(R.id.imgBtnBack);
+
+        preferences = getSharedPreferences("login_session", MODE_PRIVATE); // 'login_session'이라는 폴더를 불러옴
+        final String userId = preferences.getString("userid", "");
+        String url = "http://172.30.1.60:5000/select_t_event";
 
         // home 버튼
         imgBtnHome.setOnClickListener(new View.OnClickListener() {
@@ -59,11 +65,8 @@ public class DanActivity extends AppCompatActivity {
             }
         });
 
-        String url = "http://172.30.1.60:5000/select_t_event";
-        String user_phone_num = "010-333-6666";
-
         RequestBody formbody = new FormBody.Builder()
-                .add("user_phone_num", user_phone_num)
+                .add("userId", userId)
                 .build();
 
         OkHttpClient client = new OkHttpClient();

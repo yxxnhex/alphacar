@@ -89,7 +89,6 @@ public class UrgCallActivity extends AppCompatActivity {
                     JSONObject jObject = new JSONObject(result);
                     JSONArray jArray = jObject.getJSONArray("urg_call");
                     JSONObject jsonObject = jArray.getJSONObject(0);
-                    String user_phone = jsonObject.getString("user_phone");
                     em_call1[0] = jsonObject.getString("em_call1");
                     em_call2[0] = jsonObject.getString("em_call2");
                     car_ins_call[0] = jsonObject.getString("car_ins_call");
@@ -97,13 +96,10 @@ public class UrgCallActivity extends AppCompatActivity {
                     String car_insure_name = jsonObject.getString("car_insure_name");
                     String life_insure_name = jsonObject.getString("life_insure_name");
 
-                    if (userId.equals(user_phone)) {
-                        tvInsuName1.setText(car_insure_name);
-                        tvInsuName2.setText(life_insure_name);
-                        tvWNName1.setText(em_call1[0]);
-                        tvWNName2.setText(em_call2[0]);
-                    }
-
+                    tvInsuName1.setText(car_insure_name);
+                    tvInsuName2.setText(life_insure_name);
+                    tvWNName1.setText(em_call1[0]);
+                    tvWNName2.setText(em_call2[0]);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
