@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.7305062" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline72"
@@ -120,6 +120,20 @@
         app:layout_constraintGuide_percent="0.2" />
 
     <!--시계-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
     <DigitalClock
         android:id="@+id/digitalClock"
         android:layout_width="0dp"
@@ -164,12 +178,12 @@
         android:backgroundTint="#e24c4b"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:text="사고 접수"
+        android:text="보험 접수"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintEnd_toStartOf="@+id/guideline92"
+        app:layout_constraintStart_toStartOf="@+id/guideline85"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
@@ -183,8 +197,8 @@
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
-        app:layout_constraintEnd_toStartOf="@+id/guideline49"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/guideline93"
+        app:layout_constraintStart_toStartOf="@+id/guideline81"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <ImageView
@@ -195,7 +209,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline76"
         app:layout_constraintStart_toStartOf="@+id/guideline75"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_b" />
+        app:srcCompat="@drawable/xx" />
 
     <ImageView
         android:id="@+id/imgBtnMenu"
@@ -205,14 +219,28 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/list_b" />
+        app:srcCompat="@drawable/list" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline81"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="285dp" />
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline94"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline82"
@@ -223,12 +251,17 @@
 
     <Button
         android:id="@+id/btnMyLoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#686d82"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
         android:text="위치 확인"
+        android:textColor="@color/white"
+        android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline75"
+        app:layout_constraintEnd_toStartOf="@+id/guideline49"
+        app:layout_constraintStart_toStartOf="@+id/guideline94"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

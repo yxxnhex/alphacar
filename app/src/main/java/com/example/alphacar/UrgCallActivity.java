@@ -12,10 +12,10 @@ import android.widget.TextView;
 public class UrgCallActivity extends AppCompatActivity {
 
     // tvWarningCall, tvCallTab 아이디 지정만 해뒀어요
-    ImageView imgBtnHome, imgBtnBack;
+    ImageView imgBtnHome, imgBtnBack, btnCallNum1, btnCallNum2, btnCallNum3, btnCallNum4;
     TextView tvInsurance1, tvInsurance2, tvInsuName1, tvInsuName2;
     TextView tvWarnNum1, tvWarnNum2, tvWNName1, tvWNName2;
-    Button btnCallNum1, btnCallNum2, btnCallNum3, btnCallNum4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,12 @@ public class UrgCallActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        imgBtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
 

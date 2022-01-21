@@ -206,7 +206,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline45"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home_b" />
+        app:srcCompat="@drawable/hom2" />
 
     <ImageView
         android:id="@+id/imgBtnBack"
@@ -216,13 +216,13 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline56"
         app:layout_constraintStart_toStartOf="@+id/guideline55"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_b" />
+        app:srcCompat="@drawable/back" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="750dp"
         android:layout_height="3dp"
-        android:background="#1d6395"
+        android:background="#686d82"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toEndOf="parent"
@@ -235,13 +235,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:text="　나의 정보"
+        android:text="나의 정보"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
         app:layout_constraintTop_toTopOf="@+id/guideline51" />
 
     <TextView
@@ -296,7 +296,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <TextView
-        android:id="@+id/tvCarGas"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
@@ -345,7 +345,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tvCarGas"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="TextView"

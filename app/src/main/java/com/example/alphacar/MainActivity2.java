@@ -31,6 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         // 뒤로가기 버튼
@@ -43,7 +44,8 @@ public class MainActivity2 extends AppCompatActivity {
         btnMyLoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent new Intent(getApplicationContext(), )
+                Intent intent = new Intent(getApplicationContext(),MyLocActivity.class );
+                startActivity(intent);
             }
         });
 
