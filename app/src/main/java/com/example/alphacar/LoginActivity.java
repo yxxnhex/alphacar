@@ -121,9 +121,10 @@ public class LoginActivity extends AppCompatActivity {
                         loginCheck = true;
                     }
                 }
-                if (loginCheck) {
+                if (loginCheck == true) {
                     startActivity(intent);
                     finish();
+
                 } else {
                     Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 다시 확인해주세요", Toast.LENGTH_SHORT).show();
                 }
