@@ -272,7 +272,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back_w" />
 
     <TextView
         android:id="@+id/line"
