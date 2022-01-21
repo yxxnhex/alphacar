@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
         imgIcon = findViewById(R.id.imgAcar);
 
 
-//        ## 알파카 아이콘(어플) 클릭 시 시작 애니메이션 화면으로 전환
+//      알파카 아이콘(어플) 클릭 시 시작 애니메이션 화면으로 전환
         imgIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,21 +32,5 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        ##
-
-
-
-
     }
-
-    //  ## 시간
-//    private String getTime(){
-//        long now = System.currentTimeMillis();
-//        Date date = new Date(now);
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm");
-//        String Time = dateFormat.format(date);
-//
-//        return Time;
-//    }
-//  ##
 }
