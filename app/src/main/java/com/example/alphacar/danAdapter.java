@@ -62,8 +62,23 @@ public class danAdapter extends BaseAdapter {
 
         tvDT.setText(dan.get(i).getEvent_time());
         tvLoc.setText(loc);
-        tvEvent.setText(dan.get(i).getEvent_type());
         tvColl.setText(acc(loc));
+
+        // 사고 방향 텍스트 바꿔서 보내주기
+        // FR : 전방
+        // BK : 후방
+        // LF : 좌측
+        // RT : 우측
+        if (dan.get(i).getEvent_type().equals("FR")) {
+            tvEvent.setText("전방");
+        } else if (dan.get(i).getEvent_type().equals("BK")) {
+            tvEvent.setText("후방");
+        } else if (dan.get(i).getEvent_type().equals("LF")) {
+            tvEvent.setText("좌측");
+        }else if (dan.get(i).getEvent_type().equals("RT")) {
+            tvEvent.setText("우측");
+        }
+//        tvEvent.setText(dan.get(i).getEvent_type());
 
         return view;
     }
