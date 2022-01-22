@@ -2,11 +2,9 @@ package com.example.alphacar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -17,7 +15,7 @@ import android.os.Message;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     VideoView vidMain;
     ImageView imgBtnMenu, imgWarning, imgBtnBack;
     Animation anime;
-    LinearLayout lin_test;
+    FrameLayout lin_test;
     private boolean condition = true;
     int streamId;
     int soundId;
@@ -83,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         // raw라는 리소스 폴더 만들어서 거기에 영상을 저장
         // 영상 자체는 안드로이드 스튜디오에서 확인 불가능
         // 모듈을 켰을 때 확인 가능
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test_2_2);
 //        vidMain.setMediaController(new MediaController(this));
         // 보여줄 동영상 경로 설정
         vidMain.setVideoURI(videoUri);
@@ -125,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.cn3);
             tvWarning.setText("좌측전방\n추돌주의");
-            streamId = sound.play(soundId, 1.0F, 1.0F,  1,  -1,  1.0F);
+            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         } else if (i == 0) {
             lin_test.setBackgroundColor(Color.parseColor("#00000000"));
@@ -135,12 +133,13 @@ public class MainActivity extends AppCompatActivity {
             sound.stop(streamId);
 
 
-        } else if (i == -1) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-            startActivity(intent);
-            finish();
-
         }
+//        else if (i == -1) {
+//            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+//            startActivity(intent);
+//            finish();
+//
+//        }
 
     }
 
@@ -176,11 +175,13 @@ public class MainActivity extends AppCompatActivity {
                         message.arg1 = 1;
                         // 0일 경우 안전
                         message.obj = iv;
-                    } else if (i == 20) {
-                        message.arg1 = -1;
-                        // 0일 경우 안전
-                        message.obj = iv;
-                    } else {
+                    }
+//                    else if (i == 20) {
+//                        message.arg1 = -1;
+//                        // 0일 경우 안전
+//                        message.obj = iv;
+//                    }
+                    else {
                         message.arg1 = 0;
                         // 0일 경우 안전
                         message.obj = iv;

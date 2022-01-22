@@ -118,18 +118,28 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.86" />
 
+    <!--시계-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline138"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="525dp" />
+
     <VideoView
         android:id="@+id/vidMain"
-        android:layout_width="554dp"
-        android:layout_height="414dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadingEdge="horizontal|vertical"
+        android:foregroundGravity="fill"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline138"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!--시계-->
     <DigitalClock
         android:id="@+id/digitalClock"
         android:layout_width="0dp"
@@ -208,15 +218,15 @@
         app:layout_constraintTop_toTopOf="@+id/guideline47"
         app:srcCompat="@drawable/speed" />
 
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/lin_test"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
