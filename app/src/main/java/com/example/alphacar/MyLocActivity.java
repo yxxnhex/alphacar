@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -33,6 +35,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.pedro.library.AutoPermissions;
 import com.pedro.library.AutoPermissionsListener;
 
+import java.io.IOException;
+import java.util.List;
+
 public class MyLocActivity extends AppCompatActivity implements AutoPermissionsListener {
     private ImageView button1, button2;
     private TextView textView1;
@@ -51,6 +56,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final Geocoder geocoder = new Geocoder(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_loc);
         setTitle("GPS 현재위치 확인하기");
@@ -95,6 +101,10 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
             }
         });
 
+
+
+
+
         // 최초 지도 숨김
         mapFragment.getView().setVisibility(View.GONE);
 
@@ -105,6 +115,9 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
                 // 지도 보임
                 mapFragment.getView().setVisibility(View.VISIBLE);
                 startLocationService();
+
+
+
             }
         });
 
@@ -170,10 +183,35 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
         // 위치 확인되었을때 자동으로 호출됨 (일정시간 and 일정거리)
         @Override
         public void onLocationChanged(Location location) {
+            final Geocoder geocoder = new Geocoder(getApplicationContext());
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
             String message = "위도(Latitude)\n" + latitude + "\n\n경도(Longtitude)\n" + longitude;
             textView1.setText(message);
+
+            // 위도,경도 입력 후 변환 버튼 클릭
+            List<Address> list = null;
+            try {
+
+                double d1 = location.getLatitude();
+                double d2 = location.getLongitude();
+
+                list = geocoder.getFromLocation(
+                        d1, // 위도
+                        d2, // 경도
+                        10); // 얻어올 값의 개수
+            } catch (IOException e) {
+                e.printStackTrace();
+                Log.e("test", "입출력 오류 - 서버에서 주소변환시 에러발생");
+            }
+            if (list != null) {
+                if (list.size()==0) {
+                    textView1.setText("해당되는 주소 정보는 없습니다");
+                } else {
+                    textView1.setText(list.get(0).getAddressLine(0).toString());
+                }
+            }
+
 
             showCurrentLocation(latitude,longitude);
             Log.i("MyLocTest","onLocationChanged() 호출되었습니다.");
