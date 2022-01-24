@@ -130,9 +130,7 @@
     <VideoView
         android:id="@+id/vidMain"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fadingEdge="horizontal|vertical"
-        android:foregroundGravity="fill"
+        android:layout_height="fill_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline138"
         app:layout_constraintHorizontal_bias="1.0"
@@ -143,13 +141,13 @@
     <DigitalClock
         android:id="@+id/digitalClock"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="#48DEE4EF"
         android:gravity="center"
         android:textColor="#FFFFFF"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
