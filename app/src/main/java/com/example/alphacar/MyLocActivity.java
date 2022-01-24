@@ -12,7 +12,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,7 +62,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
 
         button1 = findViewById(R.id.button1);
 
-        textView1 = findViewById(R.id.textView1);
+        textView1 = findViewById(R.id.tvloc);
         imgBtnBack = findViewById(R.id.imgBtnBack);
         imgBtnMenu = findViewById(R.id.imgBtnMenu);
 
