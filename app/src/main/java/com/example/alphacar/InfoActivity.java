@@ -45,7 +45,7 @@ public class InfoActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("login_session", MODE_PRIVATE);
         String userId = preferences.getString("userid", "");
-        String url = "http://172.30.1.60:5000/select_t_userinfo";
+        String url = "http://172.30.1.3:5000/select_t_userinfo";
 
         // 홈 버튼
         imgBtnHome.setOnClickListener(new View.OnClickListener() {

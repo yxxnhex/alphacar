@@ -12,7 +12,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +39,7 @@ import java.util.List;
 
 public class MyLocActivity extends AppCompatActivity implements AutoPermissionsListener {
     private ImageView button1, button2;
-    private TextView textView1;
+    private TextView textView1,textView2;
     LocationManager manager;
     GPSListener gpsListener;
 
@@ -63,7 +62,8 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
 
         button1 = findViewById(R.id.button1);
 
-        textView1 = findViewById(R.id.textView1);
+        textView1 = findViewById(R.id.tvAdd);
+        textView2 = findViewById(R.id.tvloc);
         imgBtnBack = findViewById(R.id.imgBtnBack);
         imgBtnMenu = findViewById(R.id.imgBtnMenu);
 
@@ -209,6 +209,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
                     textView1.setText("해당되는 주소 정보는 없습니다");
                 } else {
                     textView1.setText(list.get(0).getAddressLine(0).toString());
+                    textView2.setText("위도(Latitude)\n" + latitude + "\n\n경도(Longtitude)\n" + longitude);
                 }
             }
 

@@ -130,25 +130,28 @@
     <VideoView
         android:id="@+id/vidMain"
         android:layout_width="0dp"
-        android:layout_height="fill_parent"
+        android:layout_height="0dp"
+        android:fadingEdge="horizontal|vertical"
+        android:foregroundGravity="fill"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline138"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <DigitalClock
         android:id="@+id/digitalClock"
-        android:layout_width="113dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="364dp"
-        android:background="#88DEE4EF"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#48DEE4EF"
         android:gravity="center"
         android:textColor="#FFFFFF"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgBtnMenu"
