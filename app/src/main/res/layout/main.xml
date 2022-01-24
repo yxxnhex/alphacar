@@ -32,21 +32,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.80" />
+        app:layout_constraintGuide_begin="550dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.07" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.80" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="234dp" />
+        app:layout_constraintGuide_begin="223dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline67"
@@ -103,13 +103,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.37" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline140"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline60"
@@ -132,18 +125,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.77013177" />
+        app:layout_constraintGuide_begin="525dp" />
 
     <VideoView
         android:id="@+id/vidMain"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fadingEdge="horizontal|vertical"
-        android:foregroundGravity="fill"
+        android:layout_height="fill_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline138"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <DigitalClock
+        android:id="@+id/digitalClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#48DEE4EF"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -166,8 +171,18 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline70" />
+
+    <TextView
+        android:id="@+id/tvSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare_aceb"
+        app:layout_constraintBottom_toTopOf="@+id/guideline67"
+        app:layout_constraintEnd_toStartOf="@+id/guideline59"
+        app:layout_constraintStart_toStartOf="@+id/guideline60"
+        app:layout_constraintTop_toTopOf="@+id/guideline47" />
 
     <ImageView
         android:id="@+id/imgWarning"
@@ -175,22 +190,9 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline140"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
         app:srcCompat="@drawable/cn6" />
-
-    <DigitalClock
-        android:id="@+id/digitalClock"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#48DEE4EF"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgBtnBack"
@@ -213,18 +215,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline60"
         app:layout_constraintTop_toTopOf="@+id/guideline47"
         app:srcCompat="@drawable/speed" />
-
-    <TextView
-        android:id="@+id/tvSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nanumsquare_aceb"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline67"
-        app:layout_constraintEnd_toStartOf="@+id/guideline59"
-        app:layout_constraintStart_toStartOf="@+id/guideline60"
-        app:layout_constraintTop_toTopOf="@+id/guideline47" />
 
     <FrameLayout
         android:id="@+id/lin_test"
