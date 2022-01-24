@@ -134,12 +134,34 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-//        else if (i == -1) {
-//            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-//            startActivity(intent);
-//            finish();
-//
-//        }
+        else if (i == 2) {
+            lin_test.startAnimation(anime);
+            lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
+            imgWarning.setImageResource(R.drawable.bike);
+            tvWarning.setText("후방\n자전거주의");
+            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
+
+        }else if (i == 3) {
+            lin_test.startAnimation(anime);
+            lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
+            imgWarning.setImageResource(R.drawable.bike);
+            tvWarning.setText("우측\n자전거주의");
+            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
+
+        }else if (i == 4) {
+            lin_test.startAnimation(anime);
+            lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
+            imgWarning.setImageResource(R.drawable.bike);
+            tvWarning.setText("전방\n자전거주의");
+            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
+
+        }
+        else if (i == -1) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(intent);
+            finish();
+
+        }
 
     }
 
@@ -165,22 +187,34 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
 
-            for (int i = 0; i < 31; i++) {
+            for (int i = 0; i < 64; i++) {
                 try {
                     Thread.sleep(1000);
                     Message message = new Message();
 
-                    if (10 <= i && i < 16) {
+                    if (8 <= i && i < 12) {
 
                         message.arg1 = 1;
                         // 0일 경우 안전
                         message.obj = iv;
                     }
-//                    else if (i == 20) {
-//                        message.arg1 = -1;
-//                        // 0일 경우 안전
-//                        message.obj = iv;
-//                    }
+                    else if (i >= 28 && i<=31) {
+                        message.arg1 = 2;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }else if (i >= 32 && i<=36) {
+                        message.arg1 = 3;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }else if (i >= 37 && i<=42) {
+                        message.arg1 = 4;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }else if (i == 63) {
+                        message.arg1 = -1;
+                        // 0일 경우 안전
+                        message.obj = iv;
+                    }
                     else {
                         message.arg1 = 0;
                         // 0일 경우 안전
