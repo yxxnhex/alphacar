@@ -64,8 +64,10 @@ public class LoginActivity extends AppCompatActivity {
         imgBtnBack = findViewById(R.id.imgBtnBack);
         edtId = findViewById(R.id.edtId);
         edtPw = findViewById(R.id.edtPw);
+        edtId.setText("010-333-6666");
+        edtPw.setText("ser");
 
-        String url = "http://172.30.1.3:5000/select_t_userinfo_login";
+        String url = "http://172.30.1.60:5000/select_t_userinfo_login";
 
         RequestBody formbody = new FormBody.Builder()
 //                .add("userId",userId).add("userPw",userPw)

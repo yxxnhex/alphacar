@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.cn3);
             tvWarning.setText("좌측전방\n추돌주의");
-            tvSpeed.setText(j+"km/h");
+            tvSpeed.setText(String.valueOf(j));
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         } else if (i == 0) {
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.clearAnimation();
             imgWarning.setImageResource(R.drawable.cn6);
             tvWarning.setText("안전");
-            tvSpeed.setText(j+"km/h");
+            tvSpeed.setText(String.valueOf(j));
             sound.stop(streamId);
 
 
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("후방\n자전거주의");
-            tvSpeed.setText(j+"km/h");
+            tvSpeed.setText(String.valueOf(j));
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         }else if (i == 3) {
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("우측\n자전거주의");
-            tvSpeed.setText(j+"km/h");
+            tvSpeed.setText(String.valueOf(j));
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         }else if (i == 4) {
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("전방\n자전거주의");
-            tvSpeed.setText(j+"km/h");
+            tvSpeed.setText(String.valueOf(j));
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         }
