@@ -196,40 +196,44 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
 
             int min_num_value = 57;
-            int max_num_value = 63;
+            int max_num_value = 60;
 
             Random ran = new Random();
 
             int ran_num;
-            for (int i = 0; i < 49; i++) {
+            for (int i = 0; i < 98; i++) {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                     Message message = new Message();
 
-                    if (8 <= i && i < 12) {
-
+                    if (17 <= i && i <= 24) {
                         message.arg1 = 1;
                         // 0일 경우 안전
                         message.obj = iv;
                         ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
                         message.arg2 = ran_num;
+                        if (i>21&&i<=22){
+                            message.arg2 = 45;
+                        }else if (23<=i && i<=24){
+                            message.arg2 = 33;
+                        }
                     }
-                    else if (i >= 18 && i<=20) {
+                    else if (i >= 36 && i<=40) {
                         message.arg1 = 2;
                         // 0일 경우 안전
                         message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i >= 21 && i<=25) {
+                    }else if (i >= 41 && i<=51) {
                         message.arg1 = 3;
                         // 0일 경우 안전
                         message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i >= 26 && i<=29) {
+                    }else if (i >= 52 && i<=58) {
                         message.arg1 = 4;
                         // 0일 경우 안전
                         message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i == 48) {
+                    }else if (i == 97) {
                         message.arg1 = -1;
                         // 0일 경우 안전
                         ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
@@ -242,8 +246,25 @@ public class MainActivity extends AppCompatActivity {
                         ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
                         message.arg2 = ran_num;
                         message.obj = iv;
-                        if (i>=14 && i<=39){
+                        if (i>=24&&i<=27){
+                            message.arg2 = 43;
+                        }else if (i>=28&&i<=29){
+                            message.arg2 = 49;
+                        }
+                        else if (i>=30 && i<80){
                             message.arg2 = 0;
+                        }else if (i>=80 && i<=82){
+                            message.arg2 = 7;
+                        }else if (i>=83 && i<=85){
+                            message.arg2 = 14;
+                        }else if (i>=86 && i<=88){
+                            message.arg2 = 20;
+                        }else if (i>=89 && i<=91){
+                            message.arg2 = 27;
+                        }else if (i>=92 && i<=94){
+                            message.arg2 = 36;
+                        }else if (i>=95 && i<=96){
+                            message.arg2 = 44;
                         }
                     }
                     handler.sendMessage(message);
