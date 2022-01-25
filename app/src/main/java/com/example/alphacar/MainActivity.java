@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     int streamId;
     int soundId, soundId2;
     SoundPool sound;
+    int cut=0;
 
 
     @Override
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 //        clMain = findViewById(R.id.clMain);
         MyThread myThread2 = new MyThread(imgWarning);
         myThread2.start();
+//        MyThread2 mT = new MyThread2(lin_test);
+//        mT.start();
         // 애니메이션용
         lin_test = findViewById(R.id.lin_test);
 
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // 사운드 부분
-        sound = new SoundPool(1, AudioManager.STREAM_ALARM, 0);
+        sound = new SoundPool(0, AudioManager.STREAM_ALARM, 0);
         soundId = sound.load(this, R.raw.bibip, 1);
         soundId2 = sound.load(this, R.raw.beeep, 1);
 
@@ -127,17 +130,15 @@ public class MainActivity extends AppCompatActivity {
             imgWarning.setImageResource(R.drawable.cn3);
             tvWarning.setText("좌측전방\n추돌주의");
             tvSpeed.setText(String.valueOf(j));
-            streamId = sound.play(soundId, 1.0F, 1.0F, 1, 1, 2.0F);
-
-        } else if (i == 0) {
+//            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
+        }
+        else if (i == 0) {
             lin_test.setBackgroundColor(Color.parseColor("#00000000"));
             lin_test.clearAnimation();
             imgWarning.setImageResource(R.drawable.cn6);
             tvWarning.setText("안전");
             tvSpeed.setText(String.valueOf(j));
-            sound.stop(streamId);
-
-
+//            sound.stop(streamId);
         }
         else if (i == 2) {
             lin_test.startAnimation(anime);
@@ -145,43 +146,61 @@ public class MainActivity extends AppCompatActivity {
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("후방\n자전거주의");
             tvSpeed.setText(String.valueOf(j));
-            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
-
-        }else if (i == 3) {
+//            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
+        }
+        else if (i == 3) {
             lin_test.startAnimation(anime);
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("우측\n자전거주의");
             tvSpeed.setText(String.valueOf(j));
-            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
-
-        }else if (i == 4) {
+//            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
+        }
+        else if (i == 4) {
             lin_test.startAnimation(anime);
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("전방\n자전거주의");
             tvSpeed.setText(String.valueOf(j));
-            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
-
+//            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
         }
         else if (i == -1) {
             Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
             startActivity(intent);
-            streamId = sound.play(soundId2, 1.0F, 1.0F, 1, 3, 1.0F);
+//            streamId = sound.play(soundId2, 0.5F, 0.5F, 1, 0, 2.0F);
             finish();
-
         }
-
+    }
+    public void Alarm (int i) {
+        if (i == 1) {
+            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
+        }else if (i == 2) {
+            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
+        }else if (i == 3) {
+            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
+        }else if (i == 4) {
+            streamId = sound.play(soundId, 0.5F, 0.5F, 1, 0, 2.0F);
+        }else if (i == 0) {
+            sound.stop(streamId);
+        }else if (i == -1) {
+            streamId = sound.play(soundId2, 0.5F, 0.5F, 1, 1, 1.0F);
+        }
     }
 
     Handler handler = new Handler() {
         @Override
         public void handleMessage(@NonNull Message msg) {
+
             if (condition) {
                 int num = msg.arg1;
                 int num2 = msg.arg2;
                 ImageView iv = (ImageView) msg.obj;
                 warning(num,num2);
+                if(cut %2 ==0){
+                    Alarm(num);
+
+                }
+                cut++;
             }
 
         }
@@ -235,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
                         // 0일 경우 안전
                         message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i == 97) {
+                    }else if (i == 96) {
                         message.arg1 = -1;
                         // 0일 경우 안전
                         ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
@@ -277,6 +296,37 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+//    class MyThread2 extends Thread {
+//        FrameLayout layout;
+//        public MyThread2(FrameLayout layout) {
+//            this.layout = layout;
+//        }
+//        public void run(){
+//            for (int i = 0; i < 25; i++) {
+//                try {
+//                    Thread.sleep(2000);
+//                    Message message2 = new Message();
+//
+//                    if (i >= 5 && i <= 6){
+//                        message2.arg1 = 1;
+//                    }else if (i >=9 && i <=10 ) {
+//                        message2.arg1 = 2;
+//                    }else if (i >=10 && i <=13 ) {
+//                        message2.arg1 = 3;
+//                    }else if (i >=13 && i <=15 ) {
+//                        message2.arg1 = 4;
+//                    }else if (i == 24) {
+//                        message2.arg1 = -1;
+//                    }else {
+//                        message2.arg1 = 0;
+//                    }
+//                    handler.sendMessage(message2);
+//                }catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
 
     @Override
     public void onBackPressed() {
