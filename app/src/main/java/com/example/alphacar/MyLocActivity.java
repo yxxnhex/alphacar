@@ -147,7 +147,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
                 //위치 요청하기
                 manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, gpsListener);
                 //manager.removeUpdates(gpsListener);
-                Toast.makeText(getApplicationContext(), "내 위치1확인 요청함", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "내 위치1확인 요청함", Toast.LENGTH_SHORT).show();
                 Log.i("MyLocTest", "requestLocationUpdates() 내 위치1에서 호출시작 ~~ ");
 
             } else if (manager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
@@ -168,7 +168,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
                 //위치 요청하기
                 manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, minTime, minDistance, gpsListener);
                 //manager.removeUpdates(gpsListener);
-                Toast.makeText(getApplicationContext(), "내 위치2확인 요청함", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "내 위치2확인 요청함", Toast.LENGTH_SHORT).show();
                 Log.i("MyLocTest","requestLocationUpdates() 내 위치2에서 호출시작 ~~ ");
             }
 
@@ -247,7 +247,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for Activity#requestPermissions for more details.
-            Toast.makeText(getApplicationContext(),"접근 권한이 없습니다.",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"접근 권한이 없습니다.",Toast.LENGTH_SHORT).show();
             return;
         } else {
 
@@ -318,7 +318,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         AutoPermissions.Companion.parsePermissions(this, requestCode, permissions, this);
-        Toast.makeText(this, "requestCode : "+requestCode+"  permissions : "+permissions+"  grantResults :"+grantResults, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "requestCode : "+requestCode+"  permissions : "+permissions+"  grantResults :"+grantResults, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -326,12 +326,12 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
         for(int i=0;i<permissions.length; i++){
             Log.e("denied", "onDenied: "+permissions[i]);
         }
-        Toast.makeText(getApplicationContext(),"permissions denied : " + permissions.length, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(),"permissions denied : " + permissions.length, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onGranted(int requestCode, String[] permissions) {
-        Toast.makeText(getApplicationContext(),"permissions granted : " + permissions.length, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(),"permissions granted : " + permissions.length, Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onBackPressed() {

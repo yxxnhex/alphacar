@@ -19,7 +19,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.start);
 
         videoView = findViewById(R.id.videoView);
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.start2);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.start);
 
         videoView.setVideoURI(videoUri);
 

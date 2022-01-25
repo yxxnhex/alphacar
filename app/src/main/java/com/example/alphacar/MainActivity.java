@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     FrameLayout lin_test;
     private boolean condition = true;
     int streamId;
-    int soundId;
+    int soundId, soundId2;
     SoundPool sound;
 
 
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         // 사운드 부분
         sound = new SoundPool(1, AudioManager.STREAM_ALARM, 0);
         soundId = sound.load(this, R.raw.bibip, 1);
+        soundId2 = sound.load(this, R.raw.beeep, 1);
 
 
         // 비디오 출력부분
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             imgWarning.setImageResource(R.drawable.cn3);
             tvWarning.setText("좌측전방\n추돌주의");
             tvSpeed.setText(String.valueOf(j));
-            streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
+            streamId = sound.play(soundId, 1.0F, 1.0F, 1, 1, 2.0F);
 
         } else if (i == 0) {
             lin_test.setBackgroundColor(Color.parseColor("#00000000"));
@@ -166,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
         else if (i == -1) {
             Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
             startActivity(intent);
+            streamId = sound.play(soundId2, 1.0F, 1.0F, 1, 3, 1.0F);
             finish();
 
         }
