@@ -186,7 +186,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
             final Geocoder geocoder = new Geocoder(getApplicationContext());
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
-            String message = "위도(Latitude)\n" + latitude + "\n\n경도(Longtitude)\n" + longitude;
+            String message = "위도\n" + latitude + "\n경도\n" + longitude;
             textView1.setText(message);
 
             // 위도,경도 입력 후 변환 버튼 클릭
@@ -209,7 +209,7 @@ public class MyLocActivity extends AppCompatActivity implements AutoPermissionsL
                     textView1.setText("해당되는 주소 정보는 없습니다");
                 } else {
                     textView1.setText(list.get(0).getAddressLine(0).toString());
-                    textView2.setText("위도(Latitude)\n" + latitude + "\n\n경도(Longtitude)\n" + longitude);
+                    textView2.setText("위도\n" + latitude + "\n경도\n" + longitude);
                 }
             }
 

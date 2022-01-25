@@ -98,14 +98,29 @@ public class UrgCallActivity extends AppCompatActivity {
                     String car_insure_name = jsonObject.getString("car_insure_name");
                     String life_insure_name = jsonObject.getString("life_insure_name");
 
-                    tvInsuName1.setText(car_insure_name);
-                    tvInsuName2.setText(life_insure_name);
-                    tvWNName1.setText(em_call1);
-                    tvWNName2.setText(em_call2);
+                    if (em_call1.equals("null")) {
+                        tvWNName1.setText(" ");
+                    } else {
+                        tvWNName1.setText(em_call1);
+                    }
+                    if (em_call2.equals("null")) {
+                        tvWNName2.setText(" ");
+                    } else {
+                        tvWNName2.setText(em_call2);
+                    }
+                    if (car_ins_call.equals("null")) {
+                        tvInsuName1.setText(" ");
+                    } else {
+                        tvInsuName1.setText(car_insure_name);
+                    }
+                    if (life_ins_call.equals("null")) {
+                        tvInsuName2.setText(" ");
+                    } else {
+                        tvInsuName2.setText(life_insure_name);
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         });
 
@@ -169,6 +184,7 @@ public class UrgCallActivity extends AppCompatActivity {
                 }
             }
         });
+
         //뒤로가기 버튼
         imgBtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
