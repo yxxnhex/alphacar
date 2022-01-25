@@ -80,53 +80,29 @@ public class DanActivity extends AppCompatActivity {
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 e.printStackTrace();
             }
-
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 String result = response.body().string();
-
                 try {
                     JSONObject jObject = new JSONObject(result);
                     JSONArray jArray = jObject.getJSONArray("t_event");
-
                     for (int i =0; i < jArray.length(); i++) {
                         JSONObject jsonObject = jArray.getJSONObject(i);
                         String event_time = jsonObject.getString("event_time");
                         String latitude = jsonObject.getString("latitude");
                         String longitude = jsonObject.getString("longitude");
                         String event_type = jsonObject.getString("event_type");
-
                         dan.add(new danVO(event_time, latitude, longitude, event_type));
-                        Log.e("for문 끝",event_time);
                     }
-
                     adapter = new danAdapter(dan, getApplicationContext(), R.layout.dan_list);
-
                     runOnUiThread(new Runnable(){ @Override public void run() { danList.setAdapter(adapter);} });
-
-
-
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
