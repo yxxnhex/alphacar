@@ -21,6 +21,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView tvWarning, tvSpeed;
@@ -117,12 +119,13 @@ public class MainActivity extends AppCompatActivity {
 
     // 애니메이션 구간 효과 넣어보기
     // 1일때 위험, -1일때, 사고, 0일때 안전
-    public void warning(int i) {
+    public void warning(int i, int j) {
         if (i == 1) {
             lin_test.startAnimation(anime);
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.cn3);
             tvWarning.setText("좌측전방\n추돌주의");
+            tvSpeed.setText(j+"km/h");
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         } else if (i == 0) {
@@ -130,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.clearAnimation();
             imgWarning.setImageResource(R.drawable.cn6);
             tvWarning.setText("안전");
+            tvSpeed.setText(j+"km/h");
             sound.stop(streamId);
 
 
@@ -139,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("후방\n자전거주의");
+            tvSpeed.setText(j+"km/h");
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         }else if (i == 3) {
@@ -146,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("우측\n자전거주의");
+            tvSpeed.setText(j+"km/h");
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         }else if (i == 4) {
@@ -153,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
             lin_test.setBackgroundColor(Color.parseColor("#88b22222"));
             imgWarning.setImageResource(R.drawable.bike);
             tvWarning.setText("전방\n자전거주의");
+            tvSpeed.setText(j+"km/h");
             streamId = sound.play(soundId, 1.0F, 1.0F, 1, -1, 1.0F);
 
         }
@@ -170,8 +177,9 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(@NonNull Message msg) {
             if (condition) {
                 int num = msg.arg1;
+                int num2 = msg.arg2;
                 ImageView iv = (ImageView) msg.obj;
-                warning(num);
+                warning(num,num2);
             }
 
         }
@@ -187,7 +195,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
 
-            for (int i = 0; i < 64; i++) {
+            int min_num_value = 57;
+            int max_num_value = 63;
+
+            Random ran = new Random();
+
+            int ran_num;
+            for (int i = 0; i < 49; i++) {
                 try {
                     Thread.sleep(1000);
                     Message message = new Message();
@@ -197,28 +211,40 @@ public class MainActivity extends AppCompatActivity {
                         message.arg1 = 1;
                         // 0일 경우 안전
                         message.obj = iv;
+                        ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
+                        message.arg2 = ran_num;
                     }
-                    else if (i >= 28 && i<=31) {
+                    else if (i >= 18 && i<=20) {
                         message.arg1 = 2;
                         // 0일 경우 안전
+                        message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i >= 32 && i<=36) {
+                    }else if (i >= 21 && i<=25) {
                         message.arg1 = 3;
                         // 0일 경우 안전
+                        message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i >= 37 && i<=42) {
+                    }else if (i >= 26 && i<=29) {
                         message.arg1 = 4;
                         // 0일 경우 안전
+                        message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i == 63) {
+                    }else if (i == 48) {
                         message.arg1 = -1;
                         // 0일 경우 안전
+                        ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
+                        message.arg2 = ran_num;
                         message.obj = iv;
                     }
                     else {
                         message.arg1 = 0;
                         // 0일 경우 안전
+                        ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
+                        message.arg2 = ran_num;
                         message.obj = iv;
+                        if (i>=14 && i<=39){
+                            message.arg2 = 0;
+                        }
                     }
                     handler.sendMessage(message);
                 } catch (InterruptedException e) {
