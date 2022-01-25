@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         // raw라는 리소스 폴더 만들어서 거기에 영상을 저장
         // 영상 자체는 안드로이드 스튜디오에서 확인 불가능
         // 모듈을 켰을 때 확인 가능
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test_2_2);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test3);
 //        vidMain.setMediaController(new MediaController(this));
         // 보여줄 동영상 경로 설정
         vidMain.setVideoURI(videoUri);
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
 
-            for (int i = 0; i < 64; i++) {
+            for (int i = 0; i < 49; i++) {
                 try {
                     Thread.sleep(1000);
                     Message message = new Message();
@@ -198,19 +198,19 @@ public class MainActivity extends AppCompatActivity {
                         // 0일 경우 안전
                         message.obj = iv;
                     }
-                    else if (i >= 28 && i<=31) {
+                    else if (i >= 17 && i<=21) {
                         message.arg1 = 2;
                         // 0일 경우 안전
                         message.obj = iv;
-                    }else if (i >= 32 && i<=36) {
+                    }else if (i >= 22 && i<=26) {
                         message.arg1 = 3;
                         // 0일 경우 안전
                         message.obj = iv;
-                    }else if (i >= 37 && i<=42) {
+                    }else if (i >= 27 && i<=32) {
                         message.arg1 = 4;
                         // 0일 경우 안전
                         message.obj = iv;
-                    }else if (i == 63) {
+                    }else if (i == 48) {
                         message.arg1 = -1;
                         // 0일 경우 안전
                         message.obj = iv;
