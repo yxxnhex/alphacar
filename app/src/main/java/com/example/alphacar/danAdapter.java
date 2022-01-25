@@ -1,6 +1,7 @@
 package com.example.alphacar;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,20 @@ public class danAdapter extends BaseAdapter {
 //        String eventTime = format.format(dan.get(i).getEvent_time());
 
         // latitude + longitude
-        String loc = dan.get(i).getLatitude() + "\n" + dan.get(i).getLongitude();
+        String latitude = dan.get(i).getLatitude();
+        String longitude = dan.get(i).getLongitude();
+        String loc = "";
+
+        Log.e("latitude",latitude);
+        Log.e("longitude",longitude);
+
+        if (latitude.equals("null")) {
+            if (longitude.equals("null")) {
+                loc = " ";
+            }
+        } else {
+            loc = latitude + "\n" + longitude;
+        }
 
 
 
@@ -84,10 +98,11 @@ public class danAdapter extends BaseAdapter {
     }
     // loc에 값이 있을 경우 '사고' 보내주기
     public String acc(String loc) {
-        if (loc != null) {
-            return "사고";
-        } else {
+        if (loc.equals(" ")) {
+            Log.e("acc",loc);
             return " ";
+        } else {
+            return "사고";
         }
     }
 }
