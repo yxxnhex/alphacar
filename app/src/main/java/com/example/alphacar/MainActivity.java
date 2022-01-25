@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         // raw라는 리소스 폴더 만들어서 거기에 영상을 저장
         // 영상 자체는 안드로이드 스튜디오에서 확인 불가능
         // 모듈을 켰을 때 확인 가능
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test_2_2);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test3);
 //        vidMain.setMediaController(new MediaController(this));
         // 보여줄 동영상 경로 설정
         vidMain.setVideoURI(videoUri);
