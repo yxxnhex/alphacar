@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
                         // 0일 경우 안전
                         message.obj = iv;
                     }
-                    else if (i >= 28 && i<=31) {
+                    else if (i >= 29 && i<=31) {
                         message.arg1 = 2;
                         // 0일 경우 안전
                         message.obj = iv;
@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
                         message.arg1 = 3;
                         // 0일 경우 안전
                         message.obj = iv;
-                    }else if (i >= 37 && i<=42) {
+                    }else if (i >= 37 && i<=40) {
                         message.arg1 = 4;
                         // 0일 경우 안전
                         message.obj = iv;
