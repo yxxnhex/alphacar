@@ -67,7 +67,7 @@ public class UrgCallActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("login_session", MODE_PRIVATE); // 'login_session'이라는 폴더를 불러옴
         final String userId = preferences.getString("userid", "");
-        String url = "http://172.30.1.60:5000/select_urg_call";
+        String url = "http://172.30.1.3:5000/select_urg_call";
 
         RequestBody formbody = new FormBody.Builder()
                 .add("userId", userId)
