@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
             Random ran = new Random();
 
             int ran_num;
-            for (int i = 0; i < 98; i++) {
+            for (int i = 0; i < 102; i++) {
                 try {
                     Thread.sleep(500);
                     Message message = new Message();
@@ -239,22 +239,22 @@ public class MainActivity extends AppCompatActivity {
                             message.arg2 = 33;
                         }
                     }
-                    else if (i >= 36 && i<=40) {
+                    else if (i >= 38 && i<=42) {
                         message.arg1 = 2;
                         // 0일 경우 안전
                         message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i >= 41 && i<=51) {
+                    }else if (i >= 43 && i<=53) {
                         message.arg1 = 3;
                         // 0일 경우 안전
                         message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i >= 52 && i<=58) {
+                    }else if (i >= 54 && i<=57) {
                         message.arg1 = 4;
                         // 0일 경우 안전
                         message.arg2 = 0;
                         message.obj = iv;
-                    }else if (i == 96) {
+                    }else if (i == 98) {
                         message.arg1 = -1;
                         // 0일 경우 안전
                         ran_num =ran.nextInt(max_num_value - min_num_value + 1) + min_num_value;
@@ -272,19 +272,19 @@ public class MainActivity extends AppCompatActivity {
                         }else if (i>=28&&i<=29){
                             message.arg2 = 49;
                         }
-                        else if (i>=30 && i<80){
+                        else if (i>=30 && i<85){
                             message.arg2 = 0;
-                        }else if (i>=80 && i<=82){
+                        }else if (i>=85 && i<=87){
                             message.arg2 = 7;
-                        }else if (i>=83 && i<=85){
+                        }else if (i>=88 && i<=90){
                             message.arg2 = 14;
-                        }else if (i>=86 && i<=88){
+                        }else if (i>=91 && i<=93){
                             message.arg2 = 20;
-                        }else if (i>=89 && i<=91){
+                        }else if (i>=93 && i<=95){
                             message.arg2 = 27;
-                        }else if (i>=92 && i<=94){
+                        }else if (i>=96 && i<=97){
                             message.arg2 = 36;
-                        }else if (i>=95 && i<=96){
+                        }else if (i>=97 && i<=99){
                             message.arg2 = 44;
                         }
                     }
